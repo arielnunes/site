@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{{ page.title }}</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/normalize.css" />
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/skeleton.css"> 
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/menu_sideslide.css" />
+  
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <!-- JS Files -->
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/classie.js"></script>
+  
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/functions.js"></script>	
+
+</head>
+	<body>
+	
+	
+	<div class="container">
+		
+		<div class="content-wrap">
+			<div class="content">
+					
+							{% include header.html %}
+							
+				<div id="holder">					
+					<div id="fullpage">
+					
+												
+									{{ content }}	
+								
+								
+					</div>
+				</div>	
+					
+			</div>
+		</div><!-- /content-wrap -->
+	</div><!-- /container -->
+	
+	
+</body>
+</html>
+
+

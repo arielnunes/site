@@ -1,0 +1,597 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+
+@font-face {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+body {
+	background-color: #212121;
+}
+.white {
+  color: white;
+  }
+  
+  
+/* TITLE FADE IN OUT */    
+
+h1 span {
+    position: absolute;
+    left:0px;
+    bottom:70px;
+    width: 320px;
+} 
+
+/* Larger than mobile */
+@media (min-width: 360px) {
+    h1 span {
+        width: 360px;
+        bottom:80px;
+    } 
+}
+/* Larger than mobile */
+@media (min-width: 400px) {
+    h1 span {
+        width: 400px;
+        bottom:90px;
+    } 
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+     h1 span {
+        width: 550px;
+    } 
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+     h1 span {
+        width: 750px;
+        bottom:100px;
+    } 
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    h1 span {
+        width: 1000px;
+    } 
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    h1 span {
+        width: 1200px;
+        bottom:115px;
+    } 
+}
+  
+/* FULL PAGE */  
+#fullpage {
+	overflow: hidden;
+}
+
+/* HEADER */
+#logo-arielnunes {
+	position: fixed;
+	top: 0;
+	margin: 22.5px 20px 20px 20px;	
+	z-index: 1002;
+}
+
+#logo-arielnunes .link svg {
+	width: 50px;
+	height: auto;	
+}
+
+nav ul li {
+	display: inline;
+	padding-right: 25px;
+}
+
+#back-bar {
+	background: #212121;
+	position: fixed;
+	left: -190px;
+	top:0;
+	height: 100%;
+	z-index: 8;
+	transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  display: none;
+}
+
+#back-bar:hover {
+	background: #CDDC39;
+	cursor:pointer;
+	transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+#back-bar:hover .back-icon #back-icon-svg {
+	fill: #212121;
+}
+
+#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg {
+	fill: #212121;
+}
+
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    #back-bar {
+      display: block;
+      width: 95px;
+    }
+    .back-icon svg {
+        width: 40px;
+    }
+    .back-icon {
+        left: 25px;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    #back-bar {
+      display: block;
+      width: 170px;
+    }
+    .back-icon {
+        left: 57.5px;
+    }
+    .back-icon svg {
+        width: 50px;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .back-icon {
+        left: 65px;
+    }
+    .back-icon svg {
+        width: 55px;
+    }
+   #back-bar {
+      display: block;
+      width: 190px;
+    }
+}
+
+
+
+.back-icon {
+	position: absolute;
+	top:50%;
+	bottom: 0;
+	right: 0;
+	
+	margin: auto;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  #logo-arielnunes {
+		margin-top: 20px;	
+	}
+	#logo-arielnunes .link svg {
+		width: 55px;
+    height: auto;	
+	}
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    #logo-arielnunes {
+      z-index: 9;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#logo-arielnunes {
+		margin: 60px 60px 60px 50px;	
+	}
+	#logo-arielnunes .link svg {
+		width: 70px;
+	}
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  #logo-arielnunes {
+		margin: 60px 60px 60px 55px;	
+	}
+	#logo-arielnunes .link svg {
+		width: 80px;
+	}
+}
+
+
+/* CTA */
+.ghost-button {
+  font-size: 16px;
+  display: inline-block;
+  width: 183px;
+  height: 60px;
+  padding: 20px 0px;
+  color: #CDDC39;
+  border: 2px solid #CDDC39;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  }
+
+/* Larger than mobile */
+@media (min-width: 360px) {
+    .ghost-button {
+       width: 210px;
+       height: 70px;
+       font-size: 18px;
+       padding-top: 22.5px;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .ghost-button {
+       width: 260px;
+       height: 80px;
+       font-size: 20px;
+       padding-top: 27.5px;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1920px) {
+    .ghost-button {
+       width: 290px;
+       height: 90px;
+       font-size: 24px;
+       padding-top: 30px;
+    }
+}
+
+.ghost-button:hover, .ghost-button:active {
+  background-color: #CDDC39;
+  color: #212121;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  }
+  
+header.ghost-button:hover, header.ghost-button:active {
+   background-color: #CDDC39;
+   color: #212121;
+   transition: background-color 0.3s ease-in, color 0.3s ease-in;
+   } 
+  
+      
+/* VIDEO/IMG BACKGROUND */  
+video.bgvid, .bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: #212121; /* in case the video doesn't fit the whole page */
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
+  }
+  
+video.bgvid {
+	z-index: 1;
+	opacity: 0.2;
+}  
+
+.section {
+	overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  z-index: 4;
+  left: 15px;
+  bottom: 35px;
+  } 
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .layer {
+          left: 140px;
+          bottom: 140px;
+      } 
+}
+  
+.layerBlack {
+  position: absolute;
+  z-index: 4;
+  background-color: #191919;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  }
+/* END VIDEO */
+
+
+
+/* ANIMATION */
+#introAnimation1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  right: 10%;
+  }
+
+#introAnimation2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  left: 10%;
+  }
+
+/* MOUSE INTRO ICON ANIMATION */
+@-webkit-keyframes scroll-inner {
+	0%   {margin-top: 30%;}
+	25%  {margin-top: 50%; height:13px; border-radius:25%;}
+	50%  {margin-top: 50%; height:8px; border-radius:50%;}
+	100% {margin-top: 30%;}    
+}
+@keyframes scroll-inner {
+	0%   {margin-top: 30%;}
+	25%  {margin-top: 50%; height:13px; border-radius:25%;}
+	50%  {margin-top: 50%; height:8px; border-radius:50%;}
+	100% {margin-top: 30%;}    
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.fadeIn {
+    -webkit-animation: fadeIn;
+    animation: fadeIn;
+    opacity: 1;
+}
+.fadeOut {
+    -webkit-animation: fadeOut;
+    animation: fadeOut;
+    opacity: 0;
+}
+.fast {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s
+}
+div.mouse-container{
+  position:absolute;
+  z-index: 4;
+  display:block;
+  width: 100%;
+  bottom: 50px;  
+}
+div.mouse{
+  animation-direction: alternate;
+  position:relative;
+  margin:0 auto;
+  display:block;
+  width:35px;
+  height:60px;
+  border: solid 2px #fff;
+  border-radius: 30px;
+  display: none;
+} 
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	div.mouse{
+    	display: block;
+	} 
+}
+
+span.scroll-down{
+    display:block;
+    width:8px;
+    height:8px;
+    background:#fff;
+    border-radius:50%;
+    margin:30% auto auto auto;
+    
+    -webkit-animation: scroll-inner 1.5s; 
+    animation: scroll-inner 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function:ease-in;
+    animation-timing-function:ease-in;
+  }
+  
+
+/* PAGE TRANSITION */  
+
+#holder {
+	margin-right: auto;
+	margin-left: auto;
+	opacity: 0;
+	transition: opacity .125s ease-in-out;
+ 	-moz-transition: opacity .125s ease-in-out;
+ 	-webkit-transition: opacity .125s ease-in-out;
+}
+
+#holder.visible {
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+ 	-moz-transition: opacity .25s ease-in-out;
+ 	-webkit-transition: opacity .25s ease-in-out;
+}
+
+
+
+/* WORK SECTION */  
+.work-section .layer {
+	margin-left: 0px;
+  bottom: 5px;
+}
+
+.work-section .layer .white {
+  margin-bottom: 0px;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    .work-section .layer {
+      margin-left: 100px;
+      top: auto;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+
+/* BURGUER MENU */  
+
+header .icon-list .ghost-button {
+    color: #CDDC39;
+    width: 100%;
+}
+
+header .icon-list .ghost-button:hover {
+    color: #212121;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.iconMenu {
+	margin-top: 50px;
+}
+
+.menu-button:hover ~ #nav-toggle {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in, color 0.3s ease-in;
+}
+
+.startProject {
+	position: absolute;
+	z-index: 1006;
+	bottom: 0px;
+}
+
+@media (min-width: 550px) {
+    .startProject {
+        bottom: -25px;
+    }
+}
+
+/* Larger than mobile */
+@media (min-width: 750px) {
+    .startProject {
+        bottom: 80px;
+    }
+}
+
+#nav-toggle { 
+	  position: fixed;
+	  margin: 25px;
+	  right: 0; 
+	  z-index: 1002;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#nav-toggle { 
+		  margin: 75px;
+	}
+}	
+
+#nav-toggle { cursor: pointer; padding: 10px 25px 16px 0px; }
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+cursor: pointer;
+height: 2px;
+width: 30px;
+background: white;
+position: absolute;
+display: block;
+content: '';
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+   #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+
+	#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after { 
+		  height: 3px;
+      width: 35px;
+	}
+}	
+
+
+#nav-toggle span:before {
+top: -10px; 
+}
+#nav-toggle span:after {
+bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+top: 0;
+}
+#nav-toggle.active span:before {
+-ms-transform: rotate(45deg); /* IE 9 */
+-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+-ms-transform: rotate(-45deg); /* IE 9 */
+-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+transform: rotate(-45deg);
+}  
+
+#nav-toggle.lime {  
+background: black;
+}
