@@ -5,7 +5,7 @@ title: Index
 
 	<div class="section work-section">
 		<div class="layerBlack">
-		    	<img src="{{base}}/assets/images/placeholder/dropbox.png" class="bgImg"/>
+		    	<img src="../assets/images/placeholder/dropbox.png" class="bgImg"/>
 		</div>    
 		
 	    <div class="layer">
@@ -15,7 +15,7 @@ title: Index
 		    <ul>
 		    	{% for work in site.pages %}
 		    		<li>
-		    			<a href="{{base}}{{work.url}}">{{work.title}}</a>
+		    			<a href="{{ site.baseurl }}{{ work.url }}">{{work.title}}</a>
 		    		</li>
 		    	{% endfor %}	
 		    </ul>
