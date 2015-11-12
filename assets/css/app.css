@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+@import url(http://192.168.0.103:8005/https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
 
 @font-face {
   font-family: 'Source Sans Pro', sans-serif;
@@ -10,6 +10,11 @@ body {
 }
 .white {
   color: white;
+  }
+
+/* BACKGROUND COLOURS */ 
+.bg-white {
+  background-color: white;
   }
   
   
@@ -101,17 +106,53 @@ nav ul li {
   display: none;
 }
 
-#back-bar:hover {
+#back-bar:hover ,
+
+#back-bar.__ghostlab-hover__ ,
+
+#back-bar.__ghostlab-hover__ ,
+
+#back-bar.__ghostlab-hover__ ,
+
+#back-bar.__ghostlab-hover__ ,
+
+#back-bar.__ghostlab-hover__ ,
+
+#back-bar.__ghostlab-hover__ {
 	background: #CDDC39;
 	cursor:pointer;
 	transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-#back-bar:hover .back-icon #back-icon-svg {
+#back-bar:hover .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg {
 	fill: #212121;
 }
 
-#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg {
+#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg {
 	fill: #212121;
 }
 
@@ -254,13 +295,37 @@ nav ul li {
     }
 }
 
-.ghost-button:hover, .ghost-button:active {
+.ghost-button:hover,
+
+.ghost-button.__ghostlab-hover__,
+
+.ghost-button.__ghostlab-hover__,
+
+.ghost-button.__ghostlab-hover__,
+
+.ghost-button.__ghostlab-hover__,
+
+.ghost-button.__ghostlab-hover__,
+
+.ghost-button.__ghostlab-hover__, .ghost-button:active , .ghost-button.__ghostlab-active__ , .ghost-button.__ghostlab-active__ , .ghost-button.__ghostlab-active__ , .ghost-button.__ghostlab-active__ , .ghost-button.__ghostlab-active__ , .ghost-button.__ghostlab-active__ {
   background-color: #CDDC39;
   color: #212121;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
   }
   
-header.ghost-button:hover, header.ghost-button:active {
+header.ghost-button:hover,
+  
+header.ghost-button.__ghostlab-hover__,
+  
+header.ghost-button.__ghostlab-hover__,
+  
+header.ghost-button.__ghostlab-hover__,
+  
+header.ghost-button.__ghostlab-hover__,
+  
+header.ghost-button.__ghostlab-hover__,
+  
+header.ghost-button.__ghostlab-hover__, header.ghost-button:active , header.ghost-button.__ghostlab-active__ , header.ghost-button.__ghostlab-active__ , header.ghost-button.__ghostlab-active__ , header.ghost-button.__ghostlab-active__ , header.ghost-button.__ghostlab-active__ , header.ghost-button.__ghostlab-active__ {
    background-color: #CDDC39;
    color: #212121;
    transition: background-color 0.3s ease-in, color 0.3s ease-in;
@@ -302,6 +367,7 @@ video.bgvid {
 }
 .section {
 	overflow: hidden;
+	position: relative;
 }
 
 .layer {
@@ -489,31 +555,111 @@ span.scroll-down{
 
 
 /* WORK SECTION */  
+.work-image img {
+  	position: absolute;
+	width: 100%;
+	height: auto;
+  	top: -50px;
+  	right: 0;
+}
+
+@media (min-width: 400px) and (orientation: landscape) {
+    .work-image img {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+}
+
+@media (min-width: 550px) {
+  .work-image img {
+	  width: auto;
+	  height: 50%;
+	  top: 0;
+    }
+}
+
+@media (min-width: 750px) {
+  .work-image img {
+	  width: auto;
+	  height: 50%;
+    top: 25%;
+    right: -100px;
+    }
+}
+
+@media (min-width: 1024px) {
+  .work-image img {
+	  height: 100%;
+    top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .work-image img {
+        right: 0;
+        }
+}
+
 .work-section .layer {
 	margin-left: 0px;
-  bottom: 5px;
+	margin-right: 10px;
+  	bottom: 0px;
 }
 
 .work-section .layer .white {
   margin-bottom: 0px;
 }
 
+@media (min-width: 550px) {
+	.work-section .layer {
+		width: 50%;
+	}
+}
+
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-    .work-section .layer {
-      margin-left: 100px;
-      top: auto;
-    }
+	.work-section .layer {
+		margin-left: 100px;
+		width: 50%;
+		top: 40%;
+		transform: translateY(-40%);
+	}
 }
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+	.work-section .layer {
+		margin-left: 50px;
+		width: 40%;
+	}
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1024px) {
+	.work-section .layer {
+		margin-left: 80px;
+		width: 30%;
+	}
+}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+	.work-section .layer {
+		margin-left: 110px;
+		width: 25%;
+		top: 60%;
+		transform: translateY(-60%);
+	}
+}
+
+@media (min-width: 1920px) {
+	.work-section .layer {
+		margin-left: 160px;
+	}
+}
 
 
 /* BURGUER MENU */  
@@ -523,7 +669,19 @@ header .icon-list .ghost-button {
     width: 100%;
 }
 
-header .icon-list .ghost-button:hover {
+header .icon-list .ghost-button:hover ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ {
     color: #212121;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
@@ -532,7 +690,19 @@ header .icon-list .ghost-button:hover {
 	margin-top: 50px;
 }
 
-.menu-button:hover ~ #nav-toggle {
+.menu-button:hover ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle {
     opacity: 0.7;
     transition: opacity 0.3s ease-in, color 0.3s ease-in;
 }
@@ -563,11 +733,16 @@ header .icon-list .ghost-button:hover {
     }
 }
 
-#nav-toggle { 
+#nav-toggle, #nav-black { 
 	  position: fixed;
 	  margin: 25px;
 	  right: 0; 
 	  z-index: 1002;
+}
+
+#nav-black { 
+    margin: 19px;
+    right: -5px;
 }
 
 /* Larger than tablet */
@@ -591,6 +766,7 @@ content: '';
 /* Larger than tablet */
 @media (min-width: 1024px) {
    #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+   #nav-black {padding: 51px 57px 16px 0px; }
 
 	#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after { 
 		  height: 3px;
