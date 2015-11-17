@@ -3,13 +3,84 @@ layout: work
 title: Project 1
 ---
 
-<ul>
-	{% for work in site.pages %}
-		<li>
-			{{work.title}}
-		</li>
-	{% endfor %}	
-</ul>
+	<div id="logo-work"><a class="link" href="{{ site.baseurl }}" alt="Logo Work">{% include work/logos/dropbox-logo.html %}</a></div>
 
-
+	<div class="section work-section bg-black">
+		
 		    	<img src="{{ site.baseurl }}/assets/images/placeholder/dropbox.png" class="bgImg"/>
+		
+	    <div class="layer">
+		    <h1 class="white">Hi, I am <br>
+		    Ariel Nunes</h1>
+		    
+		    <ul>
+		    	{% for work in site.pages %}
+		    		<li>
+		    			<a href="{{ site.baseurl }}{{ work.url }}">{{work.title}}</a>
+		    		</li>
+		    	{% endfor %}	
+		    </ul>
+		    
+		    <div class="waypoint-show"> </div>
+		    
+		</div>
+		
+		
+	</div>
+	
+	<div class="section work-section bg-white">
+		
+		<picture class="work-image">
+			<!-- 16:9 crop -->
+			<source
+				media="(min-width: 400px)"
+				srcset="{{ site.baseurl }}/assets/images/work/dropbox/dropbox1-desktop.jpg" />
+			<!-- square crop -->
+			<source
+				srcset="{{ site.baseurl }}/assets/images/work/dropbox/dropbox1-phone.jpg" />
+			<img
+				src="{{ site.baseurl }}/assets/images/work/dropbox/dropbox1-phone.jpg"
+				alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
+		</picture>
+		
+		<div class="layer">
+		    <h2>Digital Ads</h2>
+		    <p>Working with Dropbox for Business to help them drive more leads amongst IT buyers looking for a file sharing and syncing solution.</p>
+		</div>
+	</div>
+	
+	<div class="section work-section bg-white">
+		<div class="layer">
+		    <h2>Hi, I am <br>
+		    Ariel Nunes</h2>
+		    <a class="ghost-button link" href="{{base}}/work/project1.html">See project</a>
+		</div>
+		<div class="waypoint-hide"> </div>
+	</div>
+	
+	<div class="section work-section bg-black">
+		<div class="layer">
+		    <h2>Hi, I am <br>
+		    Ariel Nunes</h2>
+		    <a class="ghost-button link" href="{{base}}/work/project1.html">See project</a>
+		</div>
+	</div>
+	
+	<div class="section work-section bg-black">
+		<div class="layer">
+		    <h2>Hi, I am <br>
+		    Ariel Nunes</h2>
+		    <a class="ghost-button link" href="{{base}}/work/project1.html">See project</a>
+		</div>
+	</div>
+	
+	<div class="section work-section last-section">
+		<div class="layer">
+		    <h2>Drive users</h2>
+		    <a class="ghost-button startProject" href="{{ site.baseurl }}/contact">Start a project</a>
+		    <ul>
+		      <li><a href="#" data-target="home">Home</a></li>
+		      <li><a href="#" data-target="about">About</a></li>
+		    </ul>
+		</div>
+	</div>

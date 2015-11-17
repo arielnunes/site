@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+@import url(http://192.168.0.103:8005/https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
 
 @font-face {
   font-family: 'Source Sans Pro', sans-serif;
@@ -8,6 +8,7 @@
 body {
 	background-color: #212121;
 }
+
 .white {
   color: white;
   }
@@ -106,17 +107,29 @@ nav ul li {
   display: none;
 }
 
-#back-bar:hover {
+#back-bar:hover ,
+
+#back-bar.__ghostlab-hover__ ,
+
+#back-bar.__ghostlab-hover__ {
 	background: #CDDC39;
 	cursor:pointer;
 	transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-#back-bar:hover .back-icon #back-icon-svg {
+#back-bar:hover .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
+
+#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg {
 	fill: #212121;
 }
 
-#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg {
+#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
+
+#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg {
 	fill: #212121;
 }
 
@@ -258,13 +271,21 @@ nav ul li {
     }
 }
 
-.ghost-button:hover {
+.ghost-button:hover ,
+
+.ghost-button.__ghostlab-hover__ ,
+
+.ghost-button.__ghostlab-hover__ {
   background-color: #CDDC39;
   color: #212121;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
   }
   
-header.ghost-button:hover {
+header.ghost-button:hover ,
+  
+header.ghost-button.__ghostlab-hover__ ,
+  
+header.ghost-button.__ghostlab-hover__ {
    background-color: #CDDC39;
    color: #212121;
    transition: background-color 0.3s ease-in, color 0.3s ease-in;
@@ -291,7 +312,7 @@ video.bgvid {
 	z-index: 1;
 	opacity: 0.2;
 }  
-@media screen and (max-device-width: 800px) {
+@media screen and (max-width: 800px) {
     video.bgvid {
       display: none;
     }  
@@ -493,7 +514,7 @@ span.scroll-down{
 		position: fixed;
 		top: 20px;
 		left: 120px;
-		z-index: 1;
+		z-index: 5;
 	}
 	
 	#logo-work svg {
@@ -529,6 +550,9 @@ span.scroll-down{
   	right: 0;
 }
 
+
+  
+
 @media (min-width: 400px) and (orientation: landscape) {
     .work-image img {
       position: absolute;
@@ -537,6 +561,7 @@ span.scroll-down{
       top: 0;
       right: 0;
     }
+
 }
 
 @media (min-width: 550px) {
@@ -627,12 +652,26 @@ span.scroll-down{
 
 /* BURGUER MENU */  
 
+@media (max-height: 450px) and (orientation: landscape) {
+.menu .icon-list {
+     margin-top: -60px;   
+   }   
+.menu .icon-list .startProject {
+     margin-bottom: -50px;  
+     display: none;
+   }    
+}
+
 header .icon-list .ghost-button {
     color: #CDDC39;
     width: 100%;
 }
 
-header .icon-list .ghost-button:hover {
+header .icon-list .ghost-button:hover ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ ,
+
+header .icon-list .ghost-button.__ghostlab-hover__ {
     color: #212121;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
@@ -641,7 +680,11 @@ header .icon-list .ghost-button:hover {
 	margin-top: 50px;
 }
 
-.menu-button:hover ~ #nav-toggle {
+.menu-button:hover ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
+
+.menu-button.__ghostlab-hover__ ~ #nav-toggle {
     opacity: 0.7;
     transition: opacity 0.3s ease-in, color 0.3s ease-in;
 }
@@ -685,8 +728,12 @@ header .icon-list .ghost-button:hover {
 
 #nav-black { 
     margin: 19px;
-    right: -5px;
+    right: -3px;
     z-index: 1002;
+}
+
+#nav-black svg {
+    width: 40px;
 }
 
 /* Larger than tablet */
@@ -694,6 +741,13 @@ header .icon-list .ghost-button:hover {
 	#nav-toggle { 
 		  margin: 75px;
 	}
+  #nav-black {
+    right: -8px;
+    }
+  #nav-black svg {
+    width: 50px;
+    }
+    
 }	
 
 #nav-toggle { cursor: pointer; padding: 10px 25px 16px 0px; }
