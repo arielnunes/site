@@ -1,4 +1,4 @@
-@import url(http://192.168.0.103:8005/https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
 
 @font-face {
   font-family: 'Source Sans Pro', sans-serif;
@@ -312,7 +312,7 @@ video.bgvid {
 	z-index: 1;
 	opacity: 0.2;
 }  
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
     video.bgvid {
       display: none;
     }  

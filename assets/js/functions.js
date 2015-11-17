@@ -10,6 +10,11 @@ $(function() {
 
 
 function setWorkPage(){
+
+	console.log("setWorkPage");
+	window.scrollTo(0, 0);
+	console.log("window 0");
+	
 	backButton();
 	endOfPage();
 	swipeUp();
@@ -41,7 +46,6 @@ function setWorkPage(){
 			window.setTimeout(function() {
 			    // Redirects to new destination
 					window.location = "project1.html";
-					console.log(project);
 			}, 250);
 		
 	
@@ -63,7 +67,7 @@ function setWorkPage(){
 		      // using on
 		      $('.last-section').on('mousewheel', function(event) {
 		          console.log(event.deltaX, event.deltaY, event.deltaFactor);
-		          if (event.deltaY <= -5) {
+		          if (event.deltaY <= -1) {
 		          	console.log("wheel down");
 		          	$("#logo-arielnunes").hide();
 		          	goToNextProject();
@@ -185,7 +189,7 @@ function fullPage(){
     	css3: true,
     	verticalCentered: true,
     	scrollBar: true,
-    	scrollingSpeed: 500,
+    	scrollingSpeed: 600,
     	fitToSectionDelay: 100
     });
        
