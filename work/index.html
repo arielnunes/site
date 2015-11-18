@@ -9,7 +9,7 @@ title: Index
 		
 		    	<img src="{{ site.baseurl }}/assets/images/placeholder/dropbox.png" class="bgImg"/>
 		
-	    <div class="layer">
+	    <div id="first-section" class="layer">
 		    <h1 class="white">Hi, I am <br>
 		    Ariel Nunes</h1>
 		    
@@ -74,13 +74,21 @@ title: Index
 		</div>
 	</div>
 	
-	<div class="section work-section last-section">
-		<div class="layer">
-		    <h2>Drive users</h2>
+	<div class="section work-section last-section bg-black">
+		<div class="center">
+		    <h2 class="white">Drive users</h2>
 		    <a class="ghost-button startProject" href="{{ site.baseurl }}/contact">Start a project</a>
-		    <ul>
-		      <li><a href="#" data-target="home">Home</a></li>
-		      <li><a href="#" data-target="about">About</a></li>
-		    </ul>
+		
+			<a href="{{base}}/work/project1.html">
+				<div id="nextProjectBar" class="nextProjectBar bg-red">
+					<div id="arrow-down-icon">{% include icons/arrow-down-icon.html %}</div>
+					<div id="logo-next-work">{% include work/logos/dropbox-logo.html %}</div>
+					<div class='mouse-container'>
+					  <div class='mouse'>
+					    <span class='scroll-down'></span>
+					  </div>
+					</div>
+				</div>
+			</a>
 		</div>
 	</div>
