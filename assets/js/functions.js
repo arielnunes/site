@@ -39,22 +39,31 @@ function setWorkPage(){
 	function goToNextProject(){
 	
 		var project = getUrl();
-	
-		$('#holder').toggleClass("visible");
+			
+			TweenMax.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeOut});
+			TweenMax.to('#logo-next-work', 0.5, {opacity: 0, ease:Strong.easeOut});
+			TweenMax.to('#arrow-down-icon', 0.5, {opacity: 0, ease:Strong.easeOut});
+			
+			TweenLite.to($nextProjectBar, 1, {top: 0, ease:Strong.easeInOut, height:'100%', onComplete:toPage});
 	
 			// Over-rides the link
 			//project.preventDefault();
 			// Sets the new destination to the href of the link
-			newLocation = project.href;
-			color = $(this).data("color");
-			$('body').css('background-color', color );
-			$('#holder').css('opacity','0' );
-			// Delays action
-			window.setTimeout(function() {
-			    // Redirects to new destination
-					window.location = "project1.html";
-			}, 250);
-		
+			
+			
+			function toPage(){
+				// Delays action
+				// Redirects to new destination	
+					$('#holder').toggleClass("visible");		    			
+					newLocation = project.href;
+					color = $(this).data("color");
+					$('body').css('background-color', color );
+					$('#holder').css('opacity','0' );
+				
+				window.setTimeout(function() {			    	
+						window.location = "project1.html";
+				}, 250);
+			}	
 	
 	}
 
