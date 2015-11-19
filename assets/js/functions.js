@@ -5,18 +5,19 @@ $(function() {
   titleFadeInOut();
   setWorkPage();
   whiteUi();
-  setTimeout(topPage,800);
+  //setTimeout(topPage,800);
 });
 
 function topPage() {
-	window.scrollTo(-100, 0);
+	window.scrollTo(0, 0);
 	console.log("top window");
 }
 
 
 function setWorkPage(){
 
-	var $nextProjectBar = $('.nextProjectBar');
+	var $nextProjectUrl = $('#next-project-url').html();
+		$nextProjectBar = $('.nextProjectBar');
 	 
 	//$(nextProjectBar).hide();
 
@@ -61,8 +62,8 @@ function setWorkPage(){
 					$('#holder').css('opacity','0' );
 				
 				window.setTimeout(function() {			    	
-						window.location = "project1.html";
-				}, 250);
+						window.location = "../" + $nextProjectUrl;
+				}, 500);
 			}	
 	
 	}
@@ -143,7 +144,6 @@ function setWorkPage(){
 		$(".last-section").swipe( {
 		  //Generic swipe handler for all directions
 		  swipeUp:function(event, direction, distance, duration, fingerCount) {
-		    $("#logo-arielnunes").hide(); 
 		    goToNextProject(); 
 		  },
 		  //Default is 75px, set to 0 for demo so any distance triggers swipe

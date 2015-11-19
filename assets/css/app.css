@@ -600,14 +600,15 @@ span.scroll-down{
 }
 
 #logo-next-work svg {
+	fill: white;
 	max-width: 210px;
-	max-height: 20px;
+	max-height: 30px;
 }
 
     @media (min-width: 550px) {
     #logo-next-work svg {
       max-width: 210px;
-      max-height: 25px;
+      max-height: 35px;
     }
 } 
 
@@ -615,7 +616,7 @@ span.scroll-down{
     @media (min-width: 750px) {
     #logo-next-work svg {
       max-width: 210px;
-      max-height: 30px;
+      max-height: 40px;
     }
 } 
 

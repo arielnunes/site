@@ -5,3 +5,5 @@ twitter:     rememberlenny
 github:      rememberlenny
 destination: ./_site
 baseurl: /site
+markdown: kramdown
+include: ['_includes/work']

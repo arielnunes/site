@@ -1,26 +1,17 @@
 ---
+title: Dropbox
 layout: work
-title: Project 1
+test: dropbox
 ---
 
-	<div id="logo-work"><a class="link" href="{{ site.baseurl }}" alt="Logo Work">{% include work/logos/dropbox-logo.html %}</a></div>
-
-	<div class="section section-top work-section bg-black">
+	<div class="section work-section bg-black">
 		
-		    	<img src="{{ site.baseurl }}/assets/images/placeholder/dropbox.png" class="bgImg"/>
+		    	<img src="{{ site.baseurl }}/{{ project.cover }}" class="bgImg"/>
 		
-	    <div class="layer">
+	    <div id="first-section" class="layer">
 		    <h1 class="white">Hi, I am <br>
 		    Ariel Nunes</h1>
-		    
-		    <ul>
-		    	{% for work in site.pages %}
-		    		<li>
-		    			<a href="{{ site.baseurl }}{{ work.url }}">{{work.title}}</a>
-		    		</li>
-		    	{% endfor %}	
-		    </ul>
-		    
+		     		    
 		    <div class="waypoint-show"> </div>
 		    
 		</div>
@@ -53,7 +44,7 @@ title: Project 1
 		<div class="layer">
 		    <h2>Hi, I am <br>
 		    Ariel Nunes</h2>
-		    <a class="ghost-button link" href="{{base}}/work/project1.html">See project</a>
+		    <a class="ghost-button link" href="{{ site.baseurl }}/work/project1.html">See project</a>
 		</div>
 		<div class="waypoint-hide"> </div>
 	</div>
@@ -62,7 +53,7 @@ title: Project 1
 		<div class="layer">
 		    <h2>Hi, I am <br>
 		    Ariel Nunes</h2>
-		    <a class="ghost-button link" href="{{base}}/work/project1.html">See project</a>
+		    <a class="ghost-button link" href="{{ site.baseurl }}/work/project1.html">See project</a>
 		</div>
 	</div>
 	
@@ -70,17 +61,8 @@ title: Project 1
 		<div class="layer">
 		    <h2>Hi, I am <br>
 		    Ariel Nunes</h2>
-		    <a class="ghost-button link" href="{{base}}/work/project1.html">See project</a>
+		    <a class="ghost-button link" href="{{ site.baseurl }}/work/project1.html">See project</a>
 		</div>
 	</div>
 	
-	<div class="section work-section last-section">
-		<div class="layer">
-		    <h2>Drive users</h2>
-		    <a class="ghost-button startProject" href="{{ site.baseurl }}/contact">Start a project</a>
-		    <ul>
-		      <li><a href="#" data-target="home">Home</a></li>
-		      <li><a href="#" data-target="about">About</a></li>
-		    </ul>
-		</div>
-	</div>
+	
