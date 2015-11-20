@@ -19,12 +19,8 @@ function setWorkPage(){
 	var $nextProjectUrl = $('#next-project-url').html();
 		$nextProjectColour = $('#next-project-colour').html();
 		$nextProjectBar = $('.nextProjectBar');
-		$holder = $('#holder');
+		$logoNextWork = $('#logo-next-work');
 				 
-	//$(nextProjectBar).hide();
-
-	console.log("setWorkPage");
-	
 	backButton();
 	endOfPage();
 	swipeUp();
@@ -45,7 +41,7 @@ function setWorkPage(){
 		var project = getUrl();
 			wi = $(window).width();  
 			
-			TweenLite.to('#logo-next-work', 0.2, {opacity: 0});
+			TweenLite.to($logoNextWork, 0.2, {opacity: 0});
 			TweenLite.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to('.arrow-down', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'110%', onComplete:toPage, delay:0.3});
@@ -54,10 +50,19 @@ function setWorkPage(){
 	        var wi = $(window).width();
 	 
 	        if (wi <= 1024){
-	            TweenLite.to('#logo-next-work', 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'0vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'0vw', scaleY: 2, scaleX: 2, delay:0.3});
 	            }
+	            
+            else if (wi <= 1200){
+                TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
+                }
+	        
+	        else if (wi <= 1900){
+	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            }
+	            
 	        else {
-	            TweenLite.to('#logo-next-work', 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'30vw', scaleY: 2, scaleX: 2, delay:0.3});
 	            }
 	
 			// Over-rides the link
