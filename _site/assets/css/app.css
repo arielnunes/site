@@ -459,7 +459,7 @@ div.mouse-container{
 
 .nextProjectBar div.mouse-container{
   display: none;
-  bottom: 25px;   
+  bottom: 20px;   
 }
 
 div.mouse{
@@ -586,7 +586,7 @@ span.scroll-down{
     #logo-next-work {
         text-align: left;
         padding-left: 130px;
-        padding-top: 35px;
+        padding-top: 30px;
     }
 }
 /* Larger than desktop */
@@ -632,8 +632,9 @@ span.scroll-down{
 	}
  #logo-next-work {
         text-align: center;
-        margin-left: -140px;
+        margin-left: 35vw;
         padding-top: 0px;
+        position: absolute;
     }   
 }
 
@@ -652,19 +653,20 @@ span.scroll-down{
 		display: block;
 		position: fixed;
 		top: 20px;
-		left: 120px;
+		left: 130px;
 		z-index: 5;
 	}
 	
 	#logo-work svg {
 		max-width: 210px;
-		max-height: 50px;
+		max-height: 40px;
 	}
+
 }
 
 @media (min-width: 1024px) {
 	#logo-work {
-		top: 60px;
+		top: 55px;
 		left: 220px;
 	}
   #logo-work svg {
@@ -678,6 +680,11 @@ span.scroll-down{
 		top: 60px;
 		left: 250px;
 	}
+	
+	#logo-work svg {
+			max-width: 270px;
+			max-height: 60px;
+		}
 }
 
 

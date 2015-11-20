@@ -41,12 +41,24 @@ function setWorkPage(){
 	
 	function goToNextProject(){
 	
+	
 		var project = getUrl();
-					
-			TweenMax.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
-			TweenMax.to('#logo-next-work', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
-			TweenMax.to('.arrow-down', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			wi = $(window).width();  
+			
+			TweenLite.to('#logo-next-work', 0.2, {opacity: 0});
+			TweenLite.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenLite.to('.arrow-down', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'110%', onComplete:toPage, delay:0.3});
+	
+	
+	        var wi = $(window).width();
+	 
+	        if (wi <= 1024){
+	            TweenLite.to('#logo-next-work', 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'0vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            }
+	        else {
+	            TweenLite.to('#logo-next-work', 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            }
 	
 			// Over-rides the link
 			//project.preventDefault();
@@ -55,13 +67,13 @@ function setWorkPage(){
 			
 			function toPage(){
 				
-				window.setTimeout(function() {			    
+				window.setTimeout(function() {
 				color = $nextProjectColour;
 				$('body').css('background-color', color );
 				$('#holder').css('opacity','0' );	
 						
 				window.location = "../" + $nextProjectUrl;
-				}, 1);
+				}, 250);
 			}	
 	
 	}
@@ -69,17 +81,18 @@ function setWorkPage(){
 	function backButton(){
 				
 		$('a.backLink').click(function(event) {
-			TweenMax.to("#back-bar", 0.25, {left: -300, ease:Strong.easeInOut});
+			TweenLite.to("#back-bar", 0.25, {left: -300, ease:Strong.easeInOut});
 		});
 	
 	}
 
 
 	function endOfPage(){
+	
 		$(window).scroll(function () { 
 		   if ($(window).scrollTop() >= $(document).height() - $(window).height() - 100) {
 		      console.log("end");
-		    
+
 		    var zoom = 0;
 		    
 		    // keyboard
@@ -92,8 +105,8 @@ function setWorkPage(){
 		         	
 		         	if (zoom == 1) {
 		         		
-		         		TweenMax.from($nextProjectBar, 0.5, {bottom: -70});
-		         		TweenMax.to($nextProjectBar, 0.5, {bottom: 0, ease:Strong.easeOut, autoAlpha: 1, display:'block'});
+		         		TweenLite.from($nextProjectBar, 0.5, {bottom: -70});
+		         		TweenLite.to($nextProjectBar, 0.5, {bottom: 0, ease:Strong.easeOut, autoAlpha: 1, display:'block'});
 		         	}
 		        
 		         	else if (zoom >= 2) {
@@ -118,8 +131,8 @@ function setWorkPage(){
 			        	++zoom;
 			        	
 			        	if (zoom == 1) {
-			        		TweenMax.from($nextProjectBar, 0.5, {bottom: -70});
-			        		TweenMax.to($nextProjectBar, 0.5, {bottom: 0, ease:Strong.easeOut, autoAlpha: 1, display:'block'});
+			        		TweenLite.from($nextProjectBar, 0.5, {bottom: -70});
+			        		TweenLite.to($nextProjectBar, 0.5, {bottom: 0, ease:Strong.easeOut, autoAlpha: 1, display:'block'});
 			        	}
 			        				        	
 			        	else if (zoom >= 2) {
@@ -150,17 +163,7 @@ function setWorkPage(){
 		          //distance : Distance finger is from initial touch point in px
 		          //duration : Length of swipe in MS 
 		          //fingerCount : the number of fingers used
-		         if (phase!="cancel" && phase!="end") {
-		                     if (duration<5000)
-		                       goToNextProject();
-		                     else
-		                       moveBar();
-		                   
-		                     if (distance<200)
-		                       moveBar();
-		                     else
-		                       goToNextProject();
-		                   }
+		 
 		                   
 		                   if (phase=="cancel")
 		                   	 moveBar()  
@@ -169,7 +172,7 @@ function setWorkPage(){
 		                     goToNextProject();  
 		                   
 		                 },
-		        threshold:125,
+		        threshold:75,
 		        maxTimeThreshold:5000,
 		        fingers:'all'
 		      });
@@ -199,16 +202,16 @@ function setWorkPage(){
 		
 					if (direction == 'up') {
 					 	$($logoColor).attr('class', 'logo-color logo-work-white');
-					 	TweenMax.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
+					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
 					 	//$($navBlack).attr('class', 'fadeOut');
-						//TweenMax.to($logoColor, 0.5, {opacity:1, ease:Strong.easeInOut});
+						//TweenLite.to($logoColor, 0.5, {opacity:1, ease:Strong.easeInOut});
 						console.log("show up");
 					} else {
 						$($logoColor).attr('class', 'logo-color');
 						$($navBlack).show();
-						TweenMax.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
+						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
 						//$($navBlack).attr('class', 'fadeIn');
-						//TweenMax.to($logoColor, 0.5, {opacity:0, ease:Strong.easeInOut});
+						//TweenLite.to($logoColor, 0.5, {opacity:0, ease:Strong.easeInOut});
 						console.log("show down");
 					}
 		}, { offset: '25' }
@@ -220,13 +223,13 @@ function setWorkPage(){
 					if (direction == 'up') {
 						$($logoColor).attr('class', 'logo-color');
 						$($navBlack).show();
-						TweenMax.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
-						//TweenMax.to($logoColor, 0.5, {opacity:0, ease:Strong.easeInOut});
+						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
+						//TweenLite.to($logoColor, 0.5, {opacity:0, ease:Strong.easeInOut});
 						console.log("hide up");
 					} else {
 						$($logoColor).attr('class', 'logo-color logo-work-white');
-					 	TweenMax.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
-						//TweenMax.to($logoColor, 0.5, {opacity:1, ease:Strong.easeInOut});
+					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
+						//TweenLite.to($logoColor, 0.5, {opacity:1, ease:Strong.easeInOut});
 						console.log("hide down");
 					}
 		}, { offset: '25' }
@@ -279,7 +282,7 @@ function fullPage(){
     	css3: true,
     	verticalCentered: true,
     	scrollBar: true,
-    	scrollingSpeed: 500,
+    	scrollingSpeed: 400,
     	fitToSectionDelay: 100
     });
        
@@ -351,7 +354,7 @@ function menu() {
 			
 			
 				if ($(".logo-work-white").length == 0){
-					TweenMax.to(navBlack, 0.5, {opacity:1, delay:0.2, ease:Strong.easeInOut});
+					TweenLite.to(navBlack, 0.5, {opacity:1, delay:0.2, ease:Strong.easeInOut});
 					console.log("logo white");
 				}
 		}
@@ -361,7 +364,7 @@ function menu() {
 	
 				if ($(".logo-work-white").length == 0) {
 				 
-				    TweenMax.to(navBlack, 0.1, {opacity:0, ease:Strong.easeInOut});
+				    TweenLite.to(navBlack, 0.1, {opacity:0, ease:Strong.easeInOut});
 				    console.log("logo black");
 	
 				}
