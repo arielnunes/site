@@ -139,17 +139,45 @@ function setWorkPage(){
 	
 	function swipeUp(){
 		
-		$(".last-section").swipe( {
-		  //Generic swipe handler for all directions
-		  swipeUp:function(event, direction, distance, duration, fingerCount) {
-		    goToNextProject(); 
-		  },
-		  //Default is 75px, set to 0 for demo so any distance triggers swipe
-		  threshold:75,
-		  maxTimeThreshold:2500,
-		  fingers:'all'
-		});
 		
+		 //Enable swiping...
+		      $(".last-section").swipe( {
+		        swipeStatus:function(event, phase, direction, distance, duration, fingers)
+		        {
+		        		          //Here we can check the:
+		          //phase : 'start', 'move', 'end', 'cancel'
+		          //direction : 'left', 'right', 'up', 'down'
+		          //distance : Distance finger is from initial touch point in px
+		          //duration : Length of swipe in MS 
+		          //fingerCount : the number of fingers used
+		         if (phase!="cancel" && phase!="end") {
+		                     if (duration<5000)
+		                       goToNextProject();
+		                     else
+		                       moveBar();
+		                   
+		                     if (distance<200)
+		                       moveBar();
+		                     else
+		                       goToNextProject();
+		                   }
+		                   
+		                   if (phase=="cancel")
+		                   	 moveBar()  
+		                    
+		                   if (phase=="end")
+		                     goToNextProject();  
+		                   
+		                 },
+		        threshold:125,
+		        maxTimeThreshold:5000,
+		        fingers:'all'
+		      });
+
+		function moveBar(){
+				TweenLite.to($nextProjectBar, 0.3, {height:'15%', ease:Strong.easeOut});
+				TweenLite.to($nextProjectBar, 0.3, {height:'10%', ease:Strong.easeInOut, delay:0.3});
+			}
 		
 		
 	}
