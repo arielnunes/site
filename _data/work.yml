@@ -25,7 +25,7 @@ projects:
 - {name: 'Virgin Games', 
 	folder: 'jackpotjoy', 
 	file: 'work/jackpotjoy.html', 
-	logo: 'work/logos/jackpotjoy-logo.html', 
+	logo: 'work/logos/virgingames-logo.html', 
 	cover: 'assets/images/placeholder/virgingames-min.jpg',
 	colour-next: 'red',
 	logo-next: 'work/logos/virgingames-logo.html', 

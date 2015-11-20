@@ -45,8 +45,8 @@ function setWorkPage(){
 					
 			TweenMax.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenMax.to('#logo-next-work', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
-			TweenMax.to('#arrow-down-icon', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
-			TweenLite.to($nextProjectBar, 1, {top: 0, ease:Strong.easeInOut, height:'100%', onComplete:toPage, delay:0.3});
+			TweenMax.to('.arrow-down', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'110%', onComplete:toPage, delay:0.3});
 	
 			// Over-rides the link
 			//project.preventDefault();
@@ -54,11 +54,14 @@ function setWorkPage(){
 			
 			
 			function toPage(){
-				console.log($nextProjectColour); 
 				
-				window.setTimeout(function() {			    	
-						window.location = "../" + $nextProjectUrl;
-				}, 50);
+				window.setTimeout(function() {			    
+				color = $nextProjectColour;
+				$('body').css('background-color', color );
+				$('#holder').css('opacity','0' );	
+						
+				window.location = "../" + $nextProjectUrl;
+				}, 1);
 			}	
 	
 	}
@@ -142,7 +145,7 @@ function setWorkPage(){
 		    goToNextProject(); 
 		  },
 		  //Default is 75px, set to 0 for demo so any distance triggers swipe
-		  threshold:150,
+		  threshold:75,
 		  maxTimeThreshold:2500,
 		  fingers:'all'
 		});
@@ -237,7 +240,7 @@ function pageTransition(){
 		    // Redirects to new destination
 				window.location = newLocation;
 				
-		}, 250);
+		}, 50);
 	});
 
 }
@@ -248,7 +251,7 @@ function fullPage(){
     	css3: true,
     	verticalCentered: true,
     	scrollBar: true,
-    	scrollingSpeed: 600,
+    	scrollingSpeed: 500,
     	fitToSectionDelay: 100
     });
        
