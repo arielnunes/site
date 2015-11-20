@@ -1,0 +1,33 @@
+#-------------------------------
+# Work Section
+
+projects:
+- {name: 'Dropbox', 
+	folder: 'dropbox', 
+	file: 'work/dropbox.html', 
+	logo: 'work/logos/dropbox-logo.html', 
+	cover: 'assets/images/placeholder/dropbox-min.jpg',
+	colour-next: 'blue',
+	logo-next: 'work/logos/jackpotjoy-logo.html', 
+	next-project: 'jackpotjoy'
+	}		
+
+- {name: 'Jackpotjoy', 
+	folder: 'jackpotjoy', 
+	file: 'work/jackpotjoy.html', 
+	logo: 'work/logos/jackpotjoy-logo.html', 
+	cover: 'assets/images/placeholder/jackpotjoy-min.jpg',
+	colour-next: 'red',
+	logo-next: 'work/logos/virgingames-logo.html', 
+	next-project: 'virgingames'
+	}		
+
+- {name: 'Virgin Games', 
+	folder: 'jackpotjoy', 
+	file: 'work/jackpotjoy.html', 
+	logo: 'work/logos/jackpotjoy-logo.html', 
+	cover: 'assets/images/placeholder/virgingames-min.jpg',
+	colour-next: 'red',
+	logo-next: 'work/logos/virgingames-logo.html', 
+	next-project: 'virgingames'
+	}		

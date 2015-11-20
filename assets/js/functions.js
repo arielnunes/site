@@ -17,8 +17,10 @@ function topPage() {
 function setWorkPage(){
 
 	var $nextProjectUrl = $('#next-project-url').html();
+		$nextProjectColour = $('#next-project-colour').html();
 		$nextProjectBar = $('.nextProjectBar');
-	 
+		$holder = $('#holder');
+				 
 	//$(nextProjectBar).hide();
 
 	console.log("setWorkPage");
@@ -40,12 +42,11 @@ function setWorkPage(){
 	function goToNextProject(){
 	
 		var project = getUrl();
-			
-			TweenMax.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeOut});
-			TweenMax.to('#logo-next-work', 0.5, {opacity: 0, ease:Strong.easeOut});
-			TweenMax.to('#arrow-down-icon', 0.5, {opacity: 0, ease:Strong.easeOut});
-			
-			TweenLite.to($nextProjectBar, 1, {top: 0, ease:Strong.easeInOut, height:'100%', onComplete:toPage});
+					
+			TweenMax.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenMax.to('#logo-next-work', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenMax.to('#arrow-down-icon', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenLite.to($nextProjectBar, 1, {top: 0, ease:Strong.easeInOut, height:'100%', onComplete:toPage, delay:0.3});
 	
 			// Over-rides the link
 			//project.preventDefault();
@@ -53,17 +54,11 @@ function setWorkPage(){
 			
 			
 			function toPage(){
-				// Delays action
-				// Redirects to new destination	
-					$('#holder').toggleClass("visible");		    			
-					newLocation = project.href;
-					color = $(this).data("color");
-					$('body').css('background-color', color );
-					$('#holder').css('opacity','0' );
+				console.log($nextProjectColour); 
 				
 				window.setTimeout(function() {			    	
 						window.location = "../" + $nextProjectUrl;
-				}, 500);
+				}, 50);
 			}	
 	
 	}
@@ -225,19 +220,23 @@ function titleFadeInOut(){
 
 function pageTransition(){
 	$('#holder').toggleClass("visible");
-
+		console.log("pageTransition");
+	
 	$('a.link').click(function(event) {
-		// Over-rides the link
+		console.log("pageTransitionClick");
+			// Over-rides the link
 		event.preventDefault();
 		// Sets the new destination to the href of the link
 		newLocation = this.href;
 		color = $(this).data("color");
+		console.log(color);
 		$('body').css('background-color', color );
 		$('#holder').css('opacity','0' );
 		// Delays action
 		window.setTimeout(function() {
 		    // Redirects to new destination
 				window.location = newLocation;
+				
 		}, 250);
 	});
 
