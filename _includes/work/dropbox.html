@@ -1,27 +1,16 @@
-<!-- Project Header -->
-<div class="section work-section bg-black">
-	<img src="{{ site.baseurl }}/{{ project.cover }}" class="bgImg"/>
-    <div id="first-section" class="layer">
-	    <div class="waypoint-show"> </div>
-	</div>
-</div>
+{% include work/project-cover.html %}
 
-<!-- Section -->
+<!-- Section 1 -->
 <div class="section work-section bg-white">
-
-	<!-- Section IMAGE -->
-	<picture class="work-image">
-		<!-- 16:9 crop -->
-		<source
-			media="(min-width: 768px)"
-			srcset="{{ site.baseurl }}/assets/images/work/dropbox/dropbox1-desktop.jpg" />
-		<!-- square crop -->
-		<sources
-			srcset="{{ site.baseurl }}/assets/images/work/dropbox/dropbox1-phone.jpg" />
-		<img srcset="{{ site.baseurl }}/assets/images/work/dropbox/dropbox1-phone.jpg" alt="My default image" />
-	</picture>
 	
-	<!-- Section COPY -->
+	<!-- Section IMAGE 1 -->
+	<picture class="work-image" >
+	      <source media="(min-width: 768px)" 
+	      srcset="{{ site.baseurl }}/{{ project.cover }}/{{ project.folder }}/{{ project.folder }}-1-desktop.jpg"> 
+	      <img src="{{ site.baseurl }}/{{ project.cover }}/{{ project.folder }}/{{ project.folder }}-1-phone.jpg" alt="Dropbox for Business">
+	</picture>
+
+	<!-- Section COPY 1 -->
 	<div class="layer">
 	    <h2>Digital Ads</h2>
 	    <p>Working with Dropbox for Business to help them drive more leads amongst IT buyers looking for a file sharing and syncing solution.</p>
@@ -29,3 +18,41 @@
 </div>
 <!-- END SECTION -->
 
+
+<!-- Section 2 -->
+<div class="section work-section bg-white">
+
+	<!-- Section IMAGE 2 -->
+	<picture class="work-image" >
+	      <source media="(min-width: 768px)" 
+	      srcset="{{ site.baseurl }}/{{ project.cover }}/{{ project.folder }}/{{ project.folder }}-2-desktop.jpg"> 
+	      <img src="{{ site.baseurl }}/{{ project.cover }}/{{ project.folder }}/{{ project.folder }}-2-phone.jpg" alt="Dropbox for Business">
+	</picture>
+	
+	<!-- Section COPY 2 -->
+	<div class="layer">
+	    <h2>Target Audience</h2>
+	    <p>IT buyers, the objective was to drive users to download “Top tips for IT buyers”.</p>
+	</div>
+</div>
+<!-- END SECTION -->
+
+
+<!-- Section 3 -->
+<div class="section work-section bg-white">
+
+	<!-- Section IMAGE 3 -->
+	<picture class="work-image" >
+	      <source media="(min-width: 768px)" 
+	      srcset="{{ site.baseurl }}/{{ project.cover }}/{{ project.folder }}/{{ project.folder }}-3-desktop.jpg"> 
+	      <img src="{{ site.baseurl }}/{{ project.cover }}/{{ project.folder }}/{{ project.folder }}-3-phone.jpg" alt="Dropbox for Business">
+	</picture>
+	
+	<!-- Section COPY 3 -->
+	<div class="layer">
+	    <h2>Cool animation</h2>
+	    <p>Awesome icon and button animations to drag users atention and donwload guide.</p>
+	</div>
+	<div class="waypoint-hide"> </div>
+</div>
+<!-- END SECTION -->

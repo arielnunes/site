@@ -7,7 +7,7 @@ projects:
 	folder: 'dropbox', 
 	file: 'work/dropbox.html', 
 	logo: 'work/logos/dropbox-logo.html', 
-	cover: 'assets/images/placeholder/dropbox-min.jpg',
+	cover: 'assets/images/work',
 	colour-next: '#5553DA',
 	logo-next: 'work/logos/jackpotjoy-logo.html', 
 	next-project: 'jackpotjoy'
