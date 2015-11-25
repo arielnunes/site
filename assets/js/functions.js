@@ -5,14 +5,17 @@ $(function() {
   titleFadeInOut();
   setWorkPage();
   whiteUi();
-  //setTimeout(topPage,800);
 });
 
 function topPage() {
 	window.scrollTo(0, 0);
-	console.log("top window");
 }
 
+function homeVideo(){
+	  if ($(window).width() < 960) {
+ 	     $( ".home-video" ).remove();	        
+	 }
+}
 
 function setWorkPage(){
 
@@ -20,6 +23,11 @@ function setWorkPage(){
 		$nextProjectColour = $('#next-project-colour').html();
 		$nextProjectBar = $('.nextProjectBar');
 		$logoNextWork = $('#logo-next-work');
+		$mouseContainer = $('.mouse-container');
+		$arrowDown = $('.arrow-down');
+		$holder = $('#holder');
+		$lastSection = $('.last-section');
+		
 				 
 	backButton();
 	endOfPage();
@@ -27,11 +35,7 @@ function setWorkPage(){
 	scrollWork();	
 	
 	function getUrl(){
-		var pathname = "project1.html"; // Returns path only
-		var url      = window.location.href;     // Returns full URL
-		
-		console.log(url);
-		
+		var url      = window.location.href;
 		return url;
 	}
 	
@@ -42,8 +46,8 @@ function setWorkPage(){
 			wi = $(window).width();  
 			
 			TweenLite.to($logoNextWork, 0.2, {opacity: 0});
-			TweenLite.to('.mouse-container', 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
-			TweenLite.to('.arrow-down', 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenLite.to($mouseContainer, 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
+			TweenLite.to($arrowDown, 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'110%', onComplete:toPage, delay:0.3});
 	
 	
@@ -57,17 +61,13 @@ function setWorkPage(){
                 TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
                 }
 	        
-	        else if (wi <= 1900){
-	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
+	        else if (wi <= 1800){
+	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'26vw', scaleY: 2, scaleX: 2, delay:0.3});
 	            }
 	            
 	        else {
-	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'30vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'29vw', scaleY: 2, scaleX: 2, delay:0.3});
 	            }
-	
-			// Over-rides the link
-			//project.preventDefault();
-			// Sets the new destination to the href of the link
 			
 			
 			function toPage(){
@@ -75,7 +75,7 @@ function setWorkPage(){
 				window.setTimeout(function() {
 				color = $nextProjectColour;
 				$('body').css('background-color', color );
-				$('#holder').css('opacity','0' );	
+				$($holder).css('opacity','0' );	
 						
 				window.location = "../" + $nextProjectUrl;
 				}, 250);
@@ -96,14 +96,12 @@ function setWorkPage(){
 	
 		$(window).scroll(function () { 
 		   if ($(window).scrollTop() >= $(document).height() - $(window).height() - 100) {
-		      console.log("end");
 
 		    var zoom = 0;
 		    
 		    // keyboard
 		    $('html').keydown(function(e){
-		        $('.last-section').val(e.which);
-		         console.log(e.which);
+		        $($lastSection).val(e.which);
 		         
 		         if (e.which == 40) {
 		         	++zoom;
@@ -127,7 +125,6 @@ function setWorkPage(){
 		    // trackpad
 			var indicator = new WheelIndicator({
 			    callback: function(e){
-			        console.log(e.direction);
 			        
 			        if (e.direction == "up") {
 			        	--zoom;
@@ -144,7 +141,6 @@ function setWorkPage(){
 			        		goToNextProject();
 			        	}
 			        }
-			        console.log(zoom);
 			    },
 			    
 			});
@@ -159,25 +155,17 @@ function setWorkPage(){
 		
 		
 		 //Enable swiping...
-		      $(".last-section").swipe( {
+		      $($lastSection).swipe( {
 		        swipeStatus:function(event, phase, direction, distance, duration, fingers)
-		        {
-		        		          //Here we can check the:
-		          //phase : 'start', 'move', 'end', 'cancel'
-		          //direction : 'left', 'right', 'up', 'down'
-		          //distance : Distance finger is from initial touch point in px
-		          //duration : Length of swipe in MS 
-		          //fingerCount : the number of fingers used
-		 
-		                   
-		                   if (phase=="cancel")
-		                   	 moveBar()  
-		                    
-		                   if (phase=="end")
-		                     goToNextProject();  
+		        {		                   
+	                   if (phase=="cancel")
+	                   	 moveBar()  
+	                    
+	                   if (phase=="end")
+	                     goToNextProject();  
 		                   
 		                 },
-		        threshold:75,
+		        threshold:50,
 		        maxTimeThreshold:5000,
 		        fingers:'all'
 		      });
@@ -199,43 +187,32 @@ function setWorkPage(){
 		var $navBlack = $("#nav-black");
 	
 		// Instead of .addClass("newclass")
-		$('.logo-color').attr('class', 'logo-color logo-work-white');
+		$($logoColor).attr('class', 'logo-color logo-work-white');
 		
 		$waypointShow.waypoint(function (direction) {
-					//$('#nav-black').toggleClass('fadeIn', direction === 'down');
-		
-		
+
 					if (direction == 'up') {
 					 	$($logoColor).attr('class', 'logo-color logo-work-white');
 					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
-					 	//$($navBlack).attr('class', 'fadeOut');
-						//TweenLite.to($logoColor, 0.5, {opacity:1, ease:Strong.easeInOut});
-						console.log("show up");
+
 					} else {
 						$($logoColor).attr('class', 'logo-color');
 						$($navBlack).show();
 						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
-						//$($navBlack).attr('class', 'fadeIn');
-						//TweenLite.to($logoColor, 0.5, {opacity:0, ease:Strong.easeInOut});
-						console.log("show down");
+
 					}
 		}, { offset: '25' }
 		);			
 		
 		$waypointHide.waypoint(function (direction) {
-					//$('#nav-black').toggleClass('fadeOut', direction === 'down');
 			
 					if (direction == 'up') {
 						$($logoColor).attr('class', 'logo-color');
 						$($navBlack).show();
 						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
-						//TweenLite.to($logoColor, 0.5, {opacity:0, ease:Strong.easeInOut});
-						console.log("hide up");
 					} else {
 						$($logoColor).attr('class', 'logo-color logo-work-white');
 					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
-						//TweenLite.to($logoColor, 0.5, {opacity:1, ease:Strong.easeInOut});
-						console.log("hide down");
 					}
 		}, { offset: '25' }
 		);
@@ -244,33 +221,34 @@ function setWorkPage(){
 
 function titleFadeInOut(){
 
-		var tl = new TimelineMax({repeat:-1});
+	var $titleRandom1 = $('.titleRandom1');
+		$titleRandom2 = $('.titleRandom2');
+		$titleRandom3 = $('.titleRandom3');
+		tl = new TimelineMax({repeat:-1});
+
+	tl.from($titleRandom1, 0.5, {opacity: 0, ease:Strong.easeInOut})
+	.to($titleRandom1, 0.5, {opacity: 0, ease:Strong.easeInOut}, "+=3")
 	
-		tl.from(".titleRandom1", 0.5, {opacity: 0, ease:Strong.easeInOut})
-		.to(".titleRandom1", 0.5, {opacity: 0, ease:Strong.easeInOut}, "+=3")
-		
-		.from(".titleRandom2", 0.5, {opacity: 0, ease:Strong.easeInOut})
-		.to(".titleRandom2", 0.5, {opacity: 0, ease:Strong.easeInOut}, "+=3")
-		
-		.from(".titleRandom3", 0.5, {opacity: 0, ease:Strong.easeInOut})
-		.to(".titleRandom3", 0.5, {opacity: 0, ease:Strong.easeInOut}, "+=3");
-		
+	.from($titleRandom2, 0.5, {opacity: 0, ease:Strong.easeInOut})
+	.to($titleRandom2, 0.5, {opacity: 0, ease:Strong.easeInOut}, "+=3")
+	
+	.from($titleRandom3, 0.5, {opacity: 0, ease:Strong.easeInOut})
+	.to($titleRandom3, 0.5, {opacity: 0, ease:Strong.easeInOut}, "+=3");
 }
 
 function pageTransition(){
-	$('#holder').toggleClass("visible");
-		console.log("pageTransition");
+	var $holder = $('#holder');
+	
+	$($holder).toggleClass("visible");
 	
 	$('a.link').click(function(event) {
-		console.log("pageTransitionClick");
 			// Over-rides the link
 		event.preventDefault();
 		// Sets the new destination to the href of the link
 		newLocation = this.href;
 		color = $(this).data("color");
-		console.log(color);
 		$('body').css('background-color', color );
-		$('#holder').css('opacity','0' );
+		$($holder).css('opacity','0' );
 		// Delays action
 		window.setTimeout(function() {
 		    // Redirects to new destination
@@ -307,7 +285,6 @@ var $mouseIcon = $('.mouse-container');
 function whiteUi(){
 	$(".logo-color").attr('class', 'logo-color logo-work-white').fadeIn();
 	$("#nav-black").css('opacity', 0).fadeOut();
-	console.log("whiteUi");
 }  
 
 
@@ -360,7 +337,6 @@ function menu() {
 			
 				if ($(".logo-work-white").length == 0){
 					TweenLite.to(navBlack, 0.5, {opacity:1, delay:0.2, ease:Strong.easeInOut});
-					console.log("logo white");
 				}
 		}
 		else {
@@ -370,9 +346,7 @@ function menu() {
 				if ($(".logo-work-white").length == 0) {
 				 
 				    TweenLite.to(navBlack, 0.1, {opacity:0, ease:Strong.easeInOut});
-				    console.log("logo black");
-	
-				}
+					}
 		}
 		isOpen = !isOpen;
 	}

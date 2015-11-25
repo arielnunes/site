@@ -337,7 +337,7 @@ video.bgvid {
 	opacity: 0.2;
 }  
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
-    video.bgvid {
+    .home-video {
       display: none;
     }  
     .layerBlack {
