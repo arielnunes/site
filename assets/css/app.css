@@ -17,6 +17,10 @@ body {
     text-align: center;
 }
 
+.next-project-url, .next-project-colour {
+	display: none;
+}
+
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
     .center {
@@ -199,8 +203,6 @@ nav ul li {
       width: 190px;
     }
 }
-
-
 
 .back-icon {
 	position: absolute;
@@ -539,13 +541,14 @@ span.scroll-down{
 	height: 60px;
  	text-align: center;
   	bottom: 0;
-  	z-index: 6;
+  	z-index: 1006;
 }
 
 @media (min-width: 550px) {
     .nextProjectBar {
       left: 50px;
       height: 70px;
+      z-index: 6;
     }
 }
 
@@ -579,7 +582,7 @@ span.scroll-down{
 }
 
 /* Larger than desktop */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .nextProjectBar div.mouse-container {
       display: block;
     }
@@ -601,13 +604,13 @@ span.scroll-down{
 
 #logo-next-work svg {
 	fill: white;
-	max-width: 210px;
+	max-width: 130px;
 	max-height: 30px;
 }
 
     @media (min-width: 550px) {
     #logo-next-work svg {
-      max-width: 210px;
+      max-width: 140px;
       max-height: 35px;
     }
 } 
@@ -615,7 +618,7 @@ span.scroll-down{
 /* Larger than desktop */
     @media (min-width: 750px) {
     #logo-next-work svg {
-      max-width: 210px;
+      max-width: 170px;
       max-height: 40px;
     }
 } 
@@ -629,13 +632,7 @@ span.scroll-down{
   }
   #arrow-down-icon {
 	display: block;
-	}
- #logo-next-work {
-        text-align: center;
-        margin-left: 35vw;
-        padding-top: 0px;
-        position: absolute;
-    }   
+	} 
 }
 
 #logo-work {

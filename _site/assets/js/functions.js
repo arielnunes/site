@@ -48,7 +48,7 @@ function setWorkPage(){
 			TweenLite.to($logoNextWork, 0.2, {opacity: 0});
 			TweenLite.to($mouseContainer, 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to($arrowDown, 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
-			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'110%', onComplete:toPage, delay:0.3});
+			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'113%', onComplete:toPage, delay:0.3});
 	
 	
 	        var wi = $(window).width();
@@ -57,9 +57,9 @@ function setWorkPage(){
 	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'0vw', scaleY: 2, scaleX: 2, delay:0.3});
 	            }
 	            
-            else if (wi <= 1200){
-                TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
-                }
+	        else if (wi <= 1200){
+	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'25vw', scaleY: 2, scaleX: 2, delay:0.3});
+	            }
 	        
 	        else if (wi <= 1800){
 	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'26vw', scaleY: 2, scaleX: 2, delay:0.3});
@@ -82,6 +82,7 @@ function setWorkPage(){
 			}	
 	
 	}
+
 
 	function backButton(){
 				
@@ -157,12 +158,14 @@ function setWorkPage(){
 		 //Enable swiping...
 		      $($lastSection).swipe( {
 		        swipeStatus:function(event, phase, direction, distance, duration, fingers)
-		        {		                   
+		        {		
 	                   if (phase=="cancel")
 	                   	 moveBar()  
-	                    
+	                
+	                if (direction=="up") {                   
 	                   if (phase=="end")
-	                     goToNextProject();  
+	                     goToNextProject(); 
+	                 }     
 		                   
 		                 },
 		        threshold:50,
