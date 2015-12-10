@@ -3,7 +3,6 @@ $(function() {
   menu();
   pageTransition();
   titleFadeInOut();
-  setWorkPage();
   whiteUi();
 });
 
@@ -12,8 +11,21 @@ function topPage() {
 }
 
 function homeVideo(){
+	var $homeVideo = $('.home-video');	
+
 	  if ($(window).width() < 960) {
- 	     $( ".home-video" ).remove();	        
+ 	     $( ".home-video" ).remove();	      
+ 	      $( ".work-header" ).remove();  
+	 }
+	 
+	 TweenLite.from($homeVideo, 1, {opacity: 0, ease:Strong.easeInOut});
+	 TweenLite.to($homeVideo, 1, {opacity: 0.2, ease:Strong.easeInOut});
+}
+
+function workVideo(){
+	  if ($(window).width() < 750) {
+ 	     $( ".home-video" ).remove();	      
+ 	      $( ".work-header" ).remove();  
 	 }
 }
 
@@ -282,7 +294,7 @@ function fullPage(){
     	css3: true,
     	verticalCentered: true,
     	scrollBar: true,
-    	scrollingSpeed: 400,
+    	scrollingSpeed: 500,
     	fitToSectionDelay: 100
     });
        

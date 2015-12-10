@@ -112,6 +112,15 @@ h1 span {
 	top: 0;
 	margin: 15px 20px 20px 20px;	
 	z-index: 1002;
+    
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+#logo-arielnunes:hover {
+    opacity: 0.7;
 }
 
 #logo-arielnunes .link svg {
@@ -510,14 +519,119 @@ span.scroll-down{
 
 #holder.visible {
 	opacity: 1;
-	transition: opacity .25s ease-in-out;
- 	-moz-transition: opacity .25s ease-in-out;
- 	-webkit-transition: opacity .25s ease-in-out;
+	transition: opacity .5s ease-in-out;
+ 	-moz-transition: opacity .5s ease-in-out;
+ 	-webkit-transition: opacity .5s ease-in-out;
 }
 
 
 
 /* WORK SECTION */  
+
+#work-nav {
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	width: 100%;
+	align-content: center;
+	background-color: #212121;
+  text-align: center;
+  padding: 50px;
+}
+
+.link-work {
+	font-size: 17.5px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: white;
+}
+
+.work-icon {
+  float: left;
+    
+     opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;  
+}
+
+#work-nav ul {
+    margin: auto;
+    width: 70%;
+    
+}
+.work-icon svg, .work-icon img {
+    max-height: 35px;
+    max-width: 45px;
+}
+.work-icon-margin {
+	margin-right: 45px;
+}
+
+.work-icon:hover {
+	opacity: 0.7;  
+}
+
+.work-icon-title {
+  margin-top: 20px;
+}
+
+.work-icon-title, #work-nav {
+	display: none;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#work-nav {
+		display: block;
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    #work-nav {
+       padding-left: 80px;
+       padding-right: 20px;
+    }
+    .work-icon-title {
+      display: block;
+    }
+    	#work-nav ul {
+	    width: 100%;
+	}
+	.work-icon-margin {
+		margin-right: 65px;
+	}
+ .work-icon svg, .work-icon img {
+    max-height: 50px;
+    max-width: 75px;
+     vertical-align:bottom;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+	#work-nav ul {
+	    width: 60%;
+	}
+	.work-icon-margin {
+		margin-right: 85px;
+	}
+}
+
+@media (min-width: 1920px) {
+	#work-nav ul {
+	    width: 60%;
+	}
+	.work-icon-margin {
+		margin-right: 85px;
+	}
+ .work-icon svg, .work-icon img {
+    max-height: 55px;
+    max-width: 85px;
+    }
+}
+
 
 .last-section .startProject {
     position: static;

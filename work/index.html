@@ -3,19 +3,33 @@ layout: default
 title: Work Index
 ---
 
-<div class="section work-section bg-black">
-		
-    <div id="first-section" class="layer">
-	    <ul>
-	    	{% for project in site.pages %}
-	    		{% if project.type == 'project' %}
-	    		<li>
-	    			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a>
-	    		</li>
-	    		{% endif %}
-	    	{% endfor %}	
-	    </ul>
-	    <div class="waypoint-show"> </div>
-	</div>
-	
+{% include work/work-nav.html %}
+
+<!-- Project Header -->
+<div class="section work-header bg-black">
+  <img class="bgImg" src="{{ site.baseurl }}/assets/images/work/work-bg.png" alt="Work">
 </div>
+
+<div class="section">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'gaming' %}
+				<div class="one-half column"><a><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></a></div>
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'technology' %}
+				<div class="one-half column"><a><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></a></div>
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+	
+<script type="text/javascript">
+	workVideo();
+</script>>	
