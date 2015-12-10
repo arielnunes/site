@@ -119,6 +119,14 @@ h1 span {
 	height: auto;	
 }
 
+.logo-dark {
+	fill: #AFB42B;
+	-webkit-transition: fill 0.2s ease-in;
+	-moz-transition: fill 0.2s ease-in;
+	-o-transition: fill 0.2s ease-in;
+	transition: fill 0.2s ease-in;
+}
+
 nav ul li {
 	display: inline;
 	padding-right: 25px;
@@ -132,32 +140,20 @@ nav ul li {
 	height: 100%;
 	z-index: 8;
 	transition: background-color 0.2s ease-out, color 0.2s ease-out;
-  display: none;
+  	display: none;
 }
 
-#back-bar:hover ,
-
-#back-bar.__ghostlab-hover__ ,
-
-#back-bar.__ghostlab-hover__ {
+#back-bar:hover {
 	background: #CDDC39;
 	cursor:pointer;
 	transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-#back-bar:hover .back-icon #back-icon-svg ,
-
-#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg ,
-
-#back-bar.__ghostlab-hover__ .back-icon #back-icon-svg {
+#back-bar:hover .back-icon #back-icon-svg {
 	fill: #212121;
 }
 
-#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg ,
-
-#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg ,
-
-#back-bar.__ghostlab-hover__ + #logo-arielnunes #logo-arielnunes-svg {
+#back-bar:hover + #logo-arielnunes #logo-arielnunes-svg {
 	fill: #212121;
 }
 
@@ -297,21 +293,13 @@ nav ul li {
     }
 }
 
-.ghost-button:hover ,
-
-.ghost-button.__ghostlab-hover__ ,
-
-.ghost-button.__ghostlab-hover__ {
+.ghost-button:hover {
   background-color: #CDDC39;
   color: #212121;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
   }
   
-header.ghost-button:hover ,
-  
-header.ghost-button.__ghostlab-hover__ ,
-  
-header.ghost-button.__ghostlab-hover__ {
+header.ghost-button:hover {
    background-color: #CDDC39;
    color: #212121;
    transition: background-color 0.3s ease-in, color 0.3s ease-in;
@@ -810,11 +798,7 @@ header .icon-list .ghost-button {
     width: 100%;
 }
 
-header .icon-list .ghost-button:hover ,
-
-header .icon-list .ghost-button.__ghostlab-hover__ ,
-
-header .icon-list .ghost-button.__ghostlab-hover__ {
+header .icon-list .ghost-button:hover {
     color: #212121;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
@@ -823,11 +807,7 @@ header .icon-list .ghost-button.__ghostlab-hover__ {
 	margin-top: 50px;
 }
 
-.menu-button:hover ~ #nav-toggle ,
-
-.menu-button.__ghostlab-hover__ ~ #nav-toggle ,
-
-.menu-button.__ghostlab-hover__ ~ #nav-toggle {
+.menu-button:hover ~ #nav-toggle {
     opacity: 0.7;
     transition: opacity 0.3s ease-in, color 0.3s ease-in;
 }

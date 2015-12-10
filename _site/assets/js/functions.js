@@ -49,10 +49,7 @@ function setWorkPage(){
 			TweenLite.to($mouseContainer, 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to($arrowDown, 0.2, {opacity: 0, ease:Strong.easeInOut, delay:0.3});
 			TweenLite.to($nextProjectBar, 1, {top: -50, ease:Strong.easeInOut, height:'113%', onComplete:toPage, delay:0.3});
-	
-	
-	        var wi = $(window).width();
-	 
+		 
 	        if (wi <= 1024){
 	            TweenLite.to($logoNextWork, 0.5, {marginTop:'50vh', opacity: 1, marginLeft:'0vw', scaleY: 2, scaleX: 2, delay:0.3});
 	            }
@@ -185,9 +182,11 @@ function setWorkPage(){
 	function scrollWork(){
 		
 		var $waypointShow = $('.waypoint-show');
-		var $waypointHide = $('.waypoint-hide');
-		var $logoColor = $(".logo-color");
-		var $navBlack = $("#nav-black");
+			$waypointHide = $('.waypoint-hide');
+			$logoColor = $(".logo-color");
+			$logoAriel = $("#logo-arielnunes-svg");
+			$navBlack = $("#nav-black");
+			$wi = $(window).width();  
 	
 		// Instead of .addClass("newclass")
 		$($logoColor).attr('class', 'logo-color logo-work-white');
@@ -197,12 +196,19 @@ function setWorkPage(){
 					if (direction == 'up') {
 					 	$($logoColor).attr('class', 'logo-color logo-work-white');
 					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
+					 	
+					 	if ($wi <= 550){
+					 		$($logoAriel).attr('class', '');
+					 	}
 
 					} else {
 						$($logoColor).attr('class', 'logo-color');
 						$($navBlack).show();
 						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
-
+						
+						if ($wi <= 550){
+							$($logoAriel).attr('class', 'logo-dark');
+						}
 					}
 		}, { offset: '25' }
 		);			
@@ -213,9 +219,17 @@ function setWorkPage(){
 						$($logoColor).attr('class', 'logo-color');
 						$($navBlack).show();
 						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
+						
+						if ($wi <= 550){
+							$($logoAriel).attr('class', 'logo-dark');
+						}
 					} else {
 						$($logoColor).attr('class', 'logo-color logo-work-white');
 					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
+				 		
+				 		if ($wi <= 550){
+				 			$($logoAriel).attr('class', '');
+				 		}
 					}
 		}, { offset: '25' }
 		);
