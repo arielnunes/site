@@ -138,7 +138,7 @@ h1 span {
 
 nav ul li {
 	display: inline;
-	padding-right: 25px;
+	padding-right: 0px;
 }
 
 #back-bar {
@@ -528,17 +528,33 @@ span.scroll-down{
 
 /* WORK SECTION */  
 
+.work-icon-fix {
+	padding-top: -5px;	
+}
+
+.work-header .layer {
+    bottom: 4rem;
+}
+
 #work-nav {
 	position: fixed;
-	z-index: 2;
+	z-index: 5;
 	bottom: 0;
+	left: 0;
+	right: 0;
 	width: 100%;
 	align-content: center;
 	background-color: #212121;
-  text-align: center;
-  padding: 50px;
-}
-
+	text-align: center;
+	padding: 3em 2em 1.2em 3em;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	 transition:all 0.1s;
+	 -webkit-transition-timing-function: ease;
+	 transition-timing-function: ease;
+ 	}
+ 	
 .link-work {
 	font-size: 17.5px;
   letter-spacing: 1px;
@@ -549,31 +565,53 @@ span.scroll-down{
 .work-icon {
   float: left;
     
-     opacity: 1;
-   transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;  
+   transition: opacity 0.5s ease-in-out;
+   -moz-transition: opacity 0.5s ease-in-out;
+   -webkit-transition: opacity 0.5s ease-in-out;  
 }
+
+
 
 #work-nav ul {
     margin: auto;
-    width: 70%;
-    
+    width: 100%;    
 }
-.work-icon svg, .work-icon img {
+.work-icon svg  {
     max-height: 35px;
     max-width: 45px;
 }
-.work-icon-margin {
-	margin-right: 45px;
+
+.work-icon #home-logos, .work-icon #home-logos path {
+	fill: #FFF;
+}
+
+.work-icon:hover #home-logos, .work-icon:hover #home-logos path {
+	fill: #CDDC39;
 }
 
 .work-icon:hover {
-	opacity: 0.7;  
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari */
+transform: scale(1.1);
+transition:all 0.3s ease-out;
+}
+
+.work-icon a { 
+   color:#B6B6B6; 
+   -webkit-transition:color 0.2s ease-in; 
+   -moz-transition:color 0.2s ease-in; 
+   -o-transition:color 0.2s ease-in; 
+   transition:color 0.2s ease-in; 
+}
+
+.work-icon a:hover {
+	color:#FFF; 
 }
 
 .work-icon-title {
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 0.825em;
+  letter-spacing: 0;
 }
 
 .work-icon-title, #work-nav {
@@ -589,44 +627,43 @@ span.scroll-down{
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-    #work-nav {
-       padding-left: 80px;
-       padding-right: 20px;
-    }
     .work-icon-title {
       display: block;
     }
-    	#work-nav ul {
-	    width: 100%;
-	}
-	.work-icon-margin {
-		margin-right: 65px;
-	}
- .work-icon svg, .work-icon img {
-    max-height: 50px;
-    max-width: 75px;
-     vertical-align:bottom;
+	.work-icon svg  {
+	   	max-height: 40px;
+	   	max-width: 50px;
+	    vertical-align:bottom;
+   } 
+   .work-header .layer {
+    bottom: 9rem;
     }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-	#work-nav ul {
-	    width: 60%;
-	}
-	.work-icon-margin {
-		margin-right: 85px;
-	}
+	.work-icon svg  {
+		max-height: 55px;
+		max-width: 75px;
+	} 
+  .work-icon-title {
+      font-size: 1em;
+      margin-top: 20px;
+  }
+  .work-header .layer {
+   bottom: 15rem;
+   }
+   .work-icon-fix {
+   	padding-top: 10px;	
+   }
+   .work-title-fix {
+   	margin-top: 25px;	
+   }
 }
 
 @media (min-width: 1920px) {
-	#work-nav ul {
-	    width: 60%;
-	}
-	.work-icon-margin {
-		margin-right: 85px;
-	}
- .work-icon svg, .work-icon img {
+
+ .work-icon svg  {
     max-height: 55px;
     max-width: 85px;
     }
@@ -876,7 +913,7 @@ span.scroll-down{
 @media (min-width: 1024px) {
 	.work-section .layer {
 		margin-left: 80px;
-		width: 30%;
+		bottom: 100px;
 	}
 }
 
@@ -896,6 +933,10 @@ span.scroll-down{
 
 
 /* BURGUER MENU */  
+
+.icon-list span {
+	text-transform: capitalize;
+}
 
 @media (max-height: 450px) and (orientation: landscape) {
 .menu .icon-list {
