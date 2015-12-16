@@ -75,7 +75,9 @@
   .one-third.column               { width: 30.6666666667%; }
   .two-thirds.column              { width: 65.3333333333%; }
 
-  .one-half.column                { width: 48%; }
+  .one-half.column                { width: 50%; height: 100%; }
+  
+  .row							  { height: 100%; }
 
   /* Offsets */
   .offset-by-one.column,

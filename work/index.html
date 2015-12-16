@@ -18,11 +18,15 @@ title: Work Index
   <img class="bgImg" src="{{ site.baseurl }}/assets/images/work/work-bg.png" alt="Work">
 </div>
 
-<div data-anchor="Gaming" class="section bg-white">
+<div data-anchor="Gaming" class="section">
 	<div class="row">
 		{% for project in site.pages %}
 			{% if project.type == 'gaming' %}
-				<div class="one-half column"><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></div>
+			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">
+				<div class="one-half column" style="background-color:{{project.colour}};">
+					{{project.title}}
+				</div>
+			</a>	
 			{% endif %}
 		{% endfor %}	
 	</div>
@@ -32,7 +36,11 @@ title: Work Index
 	<div class="row">
 		{% for project in site.pages %}
 			{% if project.type == 'technology' %}
-				<div class="one-half column"><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></div>
+			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">
+				<div class="one-half column" style="background-color:{{project.colour}};">
+					{{project.title}}
+				</div>
+			</a>	
 			{% endif %}
 		{% endfor %}	
 	</div>
@@ -42,7 +50,11 @@ title: Work Index
 	<div class="row">
 		{% for project in site.pages %}
 			{% if project.type == 'technology' %}
-				<div class="one-half column"><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></div>
+			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">
+				<div class="one-half column" style="background-color:{{project.colour}};">
+					{{project.title}}
+				</div>
+			</a>	
 			{% endif %}
 		{% endfor %}	
 	</div>
@@ -52,7 +64,11 @@ title: Work Index
 	<div class="row">
 		{% for project in site.pages %}
 			{% if project.type == 'technology' %}
-				<div class="one-half column"><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></div>
+			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">
+				<div class="one-half column" style="background-color:{{project.colour}};">
+					{{project.title}}
+				</div>
+			</a>	
 			{% endif %}
 		{% endfor %}	
 	</div>
@@ -62,7 +78,11 @@ title: Work Index
 	<div class="row">
 		{% for project in site.pages %}
 			{% if project.type == 'technology' %}
-				<div class="one-half column"><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></div>
+			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">
+				<div class="one-half column" style="background-color:{{project.colour}};">
+					{{project.title}}
+				</div>
+			</a>	
 			{% endif %}
 		{% endfor %}	
 	</div>
@@ -72,7 +92,11 @@ title: Work Index
 	<div class="row">
 		{% for project in site.pages %}
 			{% if project.type == 'technology' %}
-				<div class="one-half column"><a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">{{project.title}}</a></div>
+			<a data-color="{{project.colour}}" href="{{ site.baseurl }}/work/{{ project.folder }}">
+				<div class="one-half column" style="background-color:{{project.colour}};">
+					{{project.title}}
+				</div>
+			</a>	
 			{% endif %}
 		{% endfor %}	
 	</div>
@@ -80,5 +104,4 @@ title: Work Index
 	
 <script type="text/javascript">
 	workIndex();
-	anchorWork();
 </script>>	

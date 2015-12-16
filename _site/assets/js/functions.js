@@ -2,24 +2,9 @@ $(function() {
   menu();
   pageTransition();
   titleFadeInOut();
-  whiteUi();
   fullPage();
+  whiteUi();
 });
-
-function anchorWork() {
-	$('a[href*=#]:not([href=#])').click(function() {
-	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	    var target = $(this.hash);
-	    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	    if (target.length) {
-	      $('html,body').animate({
-	        scrollTop: target.offset().top
-	      }, 500);
-	      return false;
-	    }
-	  }
-	});
-}
 
 function topPage() {
 	window.scrollTo(0, 0);
@@ -258,11 +243,10 @@ function setWorkPage(){
 			$navBlack = $("#nav-black");
 			$wi = $(window).width();  
 	
-		// Instead of .addClass("newclass")
-		$($logoColor).attr('class', 'logo-color logo-work-white');
 		
 		$waypointShow.waypoint(function (direction) {
-
+					
+					
 					if (direction == 'up') {
 					 	$($logoColor).attr('class', 'logo-color logo-work-white');
 					 	TweenLite.to($navBlack, 0.2, {opacity:0, ease:Strong.easeInOut});
@@ -285,8 +269,9 @@ function setWorkPage(){
 		
 		$waypointHide.waypoint(function (direction) {
 			
-					if (direction == 'up') {
+					if ((direction == 'up') && ($(document).scrollTop() != 0)) {
 						$($logoColor).attr('class', 'logo-color');
+						console.log("logo");
 						$($navBlack).show();
 						TweenLite.to($navBlack, 0.2, {opacity:1, ease:Strong.easeInOut});
 						
@@ -302,7 +287,7 @@ function setWorkPage(){
 				 		}
 					}
 		}, { offset: '25' }
-		);
+		);		
 	}		
 }
 
@@ -373,6 +358,7 @@ var $mouseIcon = $('.mouse-container');
 function whiteUi(){
 	$(".logo-color").attr('class', 'logo-color logo-work-white').fadeIn();
 	$("#nav-black").css('opacity', 0).fadeOut();
+	console.log("whiteUi");
 }  
 
 
