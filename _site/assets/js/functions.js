@@ -337,7 +337,7 @@ function pageTransition(){
 		    // Redirects to new destination
 				window.location = newLocation;
 				
-		}, 500);
+		}, 50);
 	});
 
 }
