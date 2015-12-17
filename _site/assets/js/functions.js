@@ -10,14 +10,25 @@ function topPage() {
 
 function homeVideo(){
 	var $homeVideo = $('.home-video');	
+		$layerBlack = $('.layerBlack');	
 
 	  if ($(window).width() < 960) {
  	     $( ".home-video" ).remove();	      
  	      $( ".work-header" ).remove();  
+ 	      
+ 	      TweenLite.from($layerBlack, 2, {opacity: 0, ease:Strong.easeInOut});
+ 	      TweenLite.to($layerBlack, 2, {opacity: 0.2, ease:Strong.easeInOut});
 	 }
+	
+	else {
+		
+	TweenLite.from($layerBlack, 2, {opacity: 0, ease:Strong.easeInOut});
+	TweenLite.to($layerBlack, 2, {opacity: 1, ease:Strong.easeInOut});
 	 
-	 TweenLite.from($homeVideo, 1, {opacity: 0, ease:Strong.easeInOut});
-	 TweenLite.to($homeVideo, 1, {opacity: 0.2, ease:Strong.easeInOut});
+	TweenLite.from($homeVideo, 2, {opacity: 0, ease:Strong.easeInOut});
+	TweenLite.to($homeVideo, 2, {opacity: 0.2, ease:Strong.easeInOut});
+	
+	} 
 }
 
 function workIndex(){
