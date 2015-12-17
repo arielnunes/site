@@ -53,8 +53,8 @@ function workIndex(){
 			$paddingTop = "3em 0em 1em 0em";
 		}
  		
- 		 TweenLite.from($workNav, 1, {bottom:-300, ease:Strong.easeInOut});
- 		 TweenLite.to($workNav, 1, {bottom:0, ease:Strong.easeInOut});
+ 		 TweenLite.from($workNav, 0.75, {bottom:-300, ease:Strong.easeInOut});
+ 		 TweenLite.to($workNav, 0.75, {bottom:0, ease:Strong.easeInOut});
  	
          $win.scroll(function () {
           
@@ -337,7 +337,7 @@ function pageTransition(){
 		    // Redirects to new destination
 				window.location = newLocation;
 				
-		}, 50);
+		}, 500);
 	});
 
 }

@@ -44,7 +44,7 @@ body {
   }
 
 .bg-black {
-	background-color: #191919;
+	background-color: #1d1d1d;
 }  
   
 /* TITLE FADE IN OUT */    
@@ -258,51 +258,58 @@ nav ul li {
 
 
 /* CTA */
-.ghost-button {
+.ghost-button, input[type="submit"]{
   font-size: 16px;
   display: inline-block;
   width: 183px;
   height: 60px;
-  padding: 20px 0px;
   color: #CDDC39;
   border: 2px solid #CDDC39;
   text-align: center;
   outline: none;
   text-decoration: none;
   transition: background-color 0.2s ease-out, color 0.2s ease-out;
-  }
+  letter-spacing: 0.025em; 
+}
+
+.padding-fix-cta {
+	padding-top: 1.2em;
+}
 
 /* Larger than mobile */
 @media (min-width: 360px) {
-    .ghost-button {
+    .ghost-button, input[type="submit"] {
        width: 210px;
        height: 70px;
        font-size: 18px;
-       padding-top: 22.5px;
+    }
+    .padding-fix-cta {
+      padding-top: 1.3em;
     }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-    .ghost-button {
+    .ghost-button, input[type="submit"] {
        width: 260px;
        height: 80px;
        font-size: 20px;
-       padding-top: 27.5px;
+    }
+    .padding-fix-cta {
+      padding-top: 1.4em;
     }
 }
 
 /* Larger than desktop */
 @media (min-width: 1920px) {
-    .ghost-button {
+    .ghost-button, input[type="submit"] {
        width: 290px;
        height: 90px;
        font-size: 24px;
-       padding-top: 30px;
     }
 }
 
-.ghost-button:hover {
+.ghost-button:hover, input[type="submit"]:hover {
   background-color: #CDDC39;
   color: #212121;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
@@ -524,6 +531,34 @@ span.scroll-down{
  	-webkit-transition: opacity .5s ease-in-out;
 }
 
+
+/* CONTACT SECTION */ 
+#contactform {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 5em;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+#contactform {
+    margin-left: 10em;
+}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+	#contactform {
+	    margin-left: 15em;
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+#contactform {
+    margin-left: 25em;
+}
+}
 
 
 /* WORK SECTION */  
