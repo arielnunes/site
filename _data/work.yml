@@ -18,7 +18,7 @@ projects:
 	folder: 'virgingames', 
 	file: 'work/virgingames.html', 
 	logo: 'work/logos/virgingames-logo.html', 
-	cover: 'assets/images/placeholder/virgingames-min.jpg',
+	cover: 'assets/images/work',
 	colour-next: '#007EE6',
 	logo-next: 'work/logos/dropbox-logo.html', 
 	next-project: 'dropbox'

@@ -11,7 +11,7 @@ body {
 
 .white {
   color: white;
-  }
+  }  
   
 .center {
     text-align: center;
@@ -323,7 +323,7 @@ header.ghost-button:hover {
   
       
 /* VIDEO/IMG BACKGROUND */  
-video.bgvid, .bgImg {
+video.bgvid, .bgImg, .bg-wheel-vg {
   position: absolute;
   top: 0;
   left: 0;
@@ -337,6 +337,10 @@ video.bgvid, .bgImg {
   background-size: contain;
   object-fit: cover;
   }
+  
+.bg-wheel-vg {
+	background: url(../images/work/virgingames/bg-wheel-vg.jpg) no-repeat center center;
+}  
   
 video.bgvid {
 	z-index: 1;
@@ -571,11 +575,11 @@ span.scroll-down{
 
 .project-logo {
 	line-height: 50vh;
-  	text-align: center;
+  text-align: center;
 }
 
 .project-logo svg {
-    margin-bottom: -5vh;
+    margin-bottom: -4vh;
     max-width: 50vh;
     max-height: 11vh;
 }
@@ -1023,6 +1027,11 @@ transition:all 0.3s ease-out;
 }
 
 
+/* VIRGIN GAMES */ 
+.virgin-wheel {
+	padding-top: 10em;
+	}
+
 /* BURGUER MENU */  
 
 .icon-list span {
@@ -1172,4 +1181,3 @@ transform: rotate(-45deg);
 #nav-toggle.lime {  
 background: black;
 }
-
