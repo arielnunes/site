@@ -7,8 +7,8 @@ $(function() {
 
 
 function fadeThis() {
-	$(window).fadeThis({speed: 400});
-	}
+	$(window).fadeThis({speed: 600});
+}
 
 
 function topPage() {
@@ -70,8 +70,8 @@ function workIndex(){
 			$paddingTop = "3em 0em 1em 0em";
 		}
  		
- 		 TweenLite.from($workNav, 0.75, {bottom:-300, ease:Strong.easeInOut});
- 		 TweenLite.to($workNav, 0.75, {bottom:0, ease:Strong.easeInOut});
+ 		 //TweenLite.from($workNav, 0.75, {bottom:-300, ease:Strong.easeInOut});
+ 		 //TweenLite.to($workNav, 0.75, {bottom:0, ease:Strong.easeInOut});
  	
          $win.scroll(function () {
           
@@ -93,7 +93,6 @@ function fullPageIndex(){
 	  	verticalCentered: true,
 	  	scrollBar: true,
 	  	scrollingSpeed: 500,
-	  	fitToSectionDelay: 100,
 	  	anchors:['Home', 'Gaming','Technology','Kids','Services','Product', 'Legacy']
 	  });
 	  
@@ -127,6 +126,8 @@ function setWorkPage(){
 	
 		var project = getUrl();
 			wi = $(window).width();  
+			
+			$nextProjectBar.toggleClass( "nextProjectBarTop" );
 			
 			TweenLite.to($logoNextWork, 0.2, {opacity: 0});
 			TweenLite.to($mouseContainer, 0.5, {opacity: 0, ease:Strong.easeInOut, delay:0.3});

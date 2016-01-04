@@ -17,6 +17,10 @@ body {
     text-align: center;
 }
 
+.padding-bottom-fix {
+	padding-bottom: 2em;
+}
+
 .next-project-url, .next-project-colour {
 	display: none;
 }
@@ -323,7 +327,7 @@ header.ghost-button:hover {
   
       
 /* VIDEO/IMG BACKGROUND */  
-video.bgvid, .bgImg, .bg-wheel-vg {
+video.bgvid, .bgImg, .bg-wheel-vg, .bg-stars-vg {
   position: absolute;
   top: 0;
   left: 0;
@@ -340,6 +344,14 @@ video.bgvid, .bgImg, .bg-wheel-vg {
   
 .bg-wheel-vg {
 	background: url(../images/work/virgingames/bg-wheel-vg.jpg) no-repeat center center;
+}  
+
+.bg-stars-vg {
+	background: url(../images/work/virgingames/bg-stars-vg.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }  
   
 video.bgvid {
@@ -775,7 +787,11 @@ transition:all 0.3s ease-out;
 	height: 60px;
  	text-align: center;
   	bottom: 0;
-  	z-index: 1006;
+  	z-index: 1000;
+}
+
+.nextProjectBarTop {
+	z-index: 1010;
 }
 
 @media (min-width: 550px) {
@@ -918,8 +934,9 @@ transition:all 0.3s ease-out;
 		}
 }
 
+/* VG wheel */
 
-.work-image img {
+.work-image iframe, .work-image img {
   	position: absolute;
 	width: 100%;
 	height: auto;
@@ -927,48 +944,48 @@ transition:all 0.3s ease-out;
   	right: 0;
 }
 
-
-  
-
-@media (min-width: 400px) and (orientation: landscape) {
-    .work-image img {
-      position: absolute;
-      width: auto;
-      height: 100%;
-      top: 0;
-      right: 0;
-    }
-
+.work-image iframe{
+	height: 90%;
 }
 
 @media (min-width: 550px) {
-  .work-image img {
+  .work-image iframe, .work-image img {
 	  width: auto;
-	  height: 50%;
-	  top: 0;
+	  height: 75%;
+	  top: 5vh;
     }
 }
 
 @media (min-width: 750px) {
-  .work-image img {
-	  width: auto;
-	  height: 50%;
-    top: 25%;
-    right: -100px;
-    }
-}
+	.work-image img {
+		  width: auto;
+		  height: 50%;
+	      top: 25%;
+	      right: -100px;
+	    }
+	.work-image iframe {
+		right: -50px;
+		height: 100%;
+	    width: 50%;
+	    top: 7vh;
+		}        
+	}
 
 @media (min-width: 1024px) {
-  .work-image img {
+ .work-image img {
 	  height: 100%;
     	top: 0;
     }
+    
 }
 
 @media (min-width: 1200px) {
-    .work-image img {
+.work-image img {
         right: 0;
         }
+.work-image iframe {
+	right: 50px;
+}               
 }
 
 .work-section .layer {
@@ -1007,14 +1024,17 @@ transition:all 0.3s ease-out;
 /* Larger than desktop */
 @media (min-width: 1024px) {
 	.work-section .layer {
+		top: 27.5vh;
 		margin-left: 80px;
 		bottom: 100px;
+		width: 35%;
 	}
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
 	.work-section .layer {
+		top: 32.5vh;
 		margin-left: 110px;
 		width: 25%;
 	}
@@ -1028,9 +1048,13 @@ transition:all 0.3s ease-out;
 
 
 /* VIRGIN GAMES */ 
-.virgin-wheel {
-	padding-top: 10em;
-	}
+
+@media (min-width: 750px) {
+    .virgin-wheel {
+       margin-top: -5em;
+    }
+}
+
 
 /* BURGUER MENU */  
 
