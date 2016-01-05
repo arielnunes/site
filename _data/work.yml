@@ -7,7 +7,6 @@ projects:
 	folder: 'jackpotjoy', 
 	file: 'work/jackpotjoy.html', 
 	logo: 'work/logos/jackpotjoy-logo.html', 
-	cover: 'assets/images/placeholder/jackpotjoy-min.jpg',
 	colour-next: '#CC0000',
 	logo-next: 'work/logos/virgingames-logo.html', 
 	next-project: 'virgingames'
@@ -18,7 +17,6 @@ projects:
 	folder: 'virgingames', 
 	file: 'work/virgingames.html', 
 	logo: 'work/logos/virgingames-logo.html', 
-	cover: 'assets/images/work',
 	colour-next: '#007EE6',
 	logo-next: 'work/logos/dropbox-logo.html', 
 	next-project: 'dropbox'
@@ -29,7 +27,6 @@ projects:
 	folder: 'dropbox', 
 	file: 'work/dropbox.html', 
 	logo: 'work/logos/dropbox-logo.html', 
-	cover: 'assets/images/work',
 	colour-next: '#fa4a24',
 	logo-next: 'work/logos/progress-logo.html', 
 	next-project: 'progress'
@@ -40,7 +37,6 @@ projects:
 	folder: 'progress', 
 	file: 'work/progress.html', 
 	logo: 'work/logos/progress-logo.html', 
-	cover: 'assets/images/placeholder/virgingames-min.jpg',
 	colour-next: '#003bd5',
 	logo-next: 'work/logos/jackpotjoy-logo.html', 
 	next-project: 'jackpotjoy'

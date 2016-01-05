@@ -50,6 +50,10 @@ body {
 .bg-black {
 	background-color: #1d1d1d;
 }  
+
+.bg-jpj {
+	background-color: #5553DA;
+}
   
 /* TITLE FADE IN OUT */    
 
@@ -376,12 +380,17 @@ video.bgvid {
 	position: relative;
 }
 
-.layer {
+.layer, .top-text {
   position: absolute;
   z-index: 4;
   left: 20px;
   bottom: 20px;
   } 
+
+.top-text {
+	top: 80px;
+	bottom: auto;
+}
 
 /* Larger than tablet */
 @media (min-width: 750px) {
@@ -389,12 +398,20 @@ video.bgvid {
           left: 80px;
           bottom: 80px;
       } 
+      .top-text {
+      	top: 25vh;
+      	left: 80px;
+      }
 }
 @media (min-width: 1024px) {
     .layer {
           left: 140px;
           bottom: 140px;
       } 
+  .top-text {
+  		top: 17.5vh;
+        left: 140px;
+    } 
 }
   
 .layerBlack {
@@ -944,6 +961,10 @@ transition:all 0.3s ease-out;
   	right: 0;
 }
 
+.left-work-image img {
+	left: 0;
+}
+
 .work-image iframe{
 	height: 90%;
 }
@@ -954,6 +975,11 @@ transition:all 0.3s ease-out;
 	  height: 75%;
 	  top: 5vh;
     }
+    
+   .work-image-bottom img {
+   	top: 40vh;
+   }
+    
 }
 
 @media (min-width: 750px) {
@@ -963,6 +989,11 @@ transition:all 0.3s ease-out;
 	      top: 25%;
 	      right: -100px;
 	    }
+	    
+	.work-image-bottom img {
+		right: 0px;
+	}
+	    
 	.work-image iframe {
 		right: -50px;
 		height: 100%;
@@ -976,16 +1007,21 @@ transition:all 0.3s ease-out;
 	  height: 100%;
     	top: 0;
     }
-    
+    .work-image-bottom img {
+    	right: -80px;
+    }
 }
 
 @media (min-width: 1200px) {
-.work-image img {
-        right: 0;
-        }
-.work-image iframe {
-	right: 50px;
-}               
+	.work-image img {
+	        right: 0;
+	        }
+	.work-image iframe {
+		right: 50px;
+	}      
+	.work-image-bottom img {
+		right: 0px;
+	}         
 }
 
 .work-section .layer {
@@ -998,15 +1034,12 @@ transition:all 0.3s ease-out;
   	margin-bottom: 0px;
 }
 
+/* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
 	.work-section .layer {
 		width: 50%;
 	}
-}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-	.work-section .layer {
+	.work-section .layer, .work-section .top-text {
 		margin-left: 100px;
 	}
 }
@@ -1019,6 +1052,12 @@ transition:all 0.3s ease-out;
 		margin-left: 50px;
 		width: 40%;
 	}
+	.work-section .right-layer {
+	  margin-left: 50%;
+	}
+	.work-section .top-text {
+		margin-left: 50px;
+	}
 }
 
 /* Larger than desktop */
@@ -1029,6 +1068,12 @@ transition:all 0.3s ease-out;
 		bottom: 100px;
 		width: 35%;
 	}
+	.work-section .top-text {
+		margin-left: 80px;
+	}
+	.work-section .right-layer {
+	  margin-left: 50%;
+	}
 }
 
 /* Larger than Desktop HD */
@@ -1038,12 +1083,201 @@ transition:all 0.3s ease-out;
 		margin-left: 110px;
 		width: 25%;
 	}
+	.work-section .top-text {
+		margin-left: 110px;
+	}
+	.work-section .right-layer {
+	  margin-left: 55vw;
+	}
 }
 
 @media (min-width: 1920px) {
-	.work-section .layer {
+	.work-section .layer, .work-section .top-text {
 		margin-left: 160px;
 	}
+	.work-section .right-layer {
+	  margin-left: 60vw;
+	}
+	.work-section .layer {
+		top: 40vh;
+	}
+	.work-section .top-text {
+		max-width: 1200px;
+	}
+}
+
+/* JACKPOTJOY */ 
+
+.jpj-vip-bg {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+70,dddddd+100 */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 70%, rgba(221,221,221,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 70%,rgba(221,221,221,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 70%,rgba(221,221,221,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.tiki-groove-bg {
+	display: none;
+}
+
+.tiki-groove {
+	margin-top: 5em;
+}
+
+@media (min-width: 450px) { 
+	.tiki-groove {
+		margin-top: 0em;
+	}
+}
+
+@media (min-width: 750px) { 
+	.tiki-groove {
+		margin-top: -5vh;
+		margin-right: 45vw;
+	}
+}
+
+@media (min-width: 1024px) { 
+	.tiki-groove {
+		margin-right: 41vw;
+	}
+}
+
+@media (min-width: 1200px) { 
+	.tiki-groove {
+		margin-top: 0vh;
+		margin-right: 35vw;
+	}
+	.tiki-groove-bg {
+		display: block;
+	}
+}
+
+.bg-jpj .work-image {
+	display: none;
+}
+
+
+@media (min-width: 450px) { 
+	.bg-jpj .work-image {
+		display: block;
+	}
+	.bg-jpj .cardWrapper {
+		display: none;
+	}
+}
+
+@media (min-width: 750px) { 
+	.bg-jpj .cardWrapper {
+		display: block;
+	}
+}
+
+.padding-fix-layer {
+	padding: 25px;
+}
+
+@media (min-width: 750px) { 
+	.padding-fix-layer {
+		margin-top: -100px;
+	}
+}
+
+@media (min-width: 1200px) { 
+	.padding-fix-layer {
+		margin-top: -120px;
+	}
+}
+
+.padding-fix-layer h6 {
+	margin-top: 50px;
+}
+
+@media (min-width: 450px) { 
+	.padding-fix-layer h6 {
+		margin-top: 0px;
+	}
+}
+
+@media (min-width: 1200px) { 
+	.padding-fix-layer h6 {
+		margin-top: 50px;
+	}
+}
+
+
+.cardWrapper{
+  width:20em;
+  height:20em;
+  position:relative;
+  /*background-color:#333;*/
+  float:left;
+  margin-right:10px;
+  cursor:pointer;
+  -webkit-font-smoothing:antialiased;
+}
+
+.cardFace{
+  position:absolute;
+  width:20em;
+  height:20em;
+  overflow:hidden;
+  margin-bottom: 150px;
+}
+
+@media (min-width: 450px) { 
+	.cardWrapper{
+	  width:26.5em;
+	  height:26.5em;
+	}
+	
+	.cardFace{
+	  width:26.5em;
+	  height:26.5em;
+	}
+}
+
+@media (min-width: 1200px) { 
+	.cardWrapper{
+	  width:30em;
+	  height:30em;
+	}
+	
+	.cardFace{
+	  width:30em;
+	  height:30em;
+	}
+}
+
+
+.front img, .back img{
+  width: 100%;
+  height: auto;
+}
+
+
+
+.cardFace h1{
+  margin:0px;
+  font-size:30px;
+  padding:10px 0px 10px 10px;
+  border-bottom:solid 6px #aaa;
+  border-top:solid 6px #aaa;
+  background-color:black;
+  color:white;
+}
+
+
+.cardFace.back h1{
+ border-color:#91e600;
+}
+
+.moreInfo{
+  padding:10px;
+  color:white;
+  line-height:24px;
+  
 }
 
 
