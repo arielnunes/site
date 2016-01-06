@@ -1,0 +1,117 @@
+---
+layout: default
+title: Work Index
+---
+
+{% include work/work-nav.html %}
+
+<!-- Project Header -->
+<div class="section work-header bg-black">
+	<div class="layer">
+	    <h1 class="white">
+	    	<span class="titleRandom1">Drive Users</span>
+	   		<span class="titleRandom2">Have Fun</span>
+	   		<span class="titleRandom3">Experience More</span>
+	    </h1>
+	</div>
+
+
+	<picture>
+	    <source srcset="{{ site.baseurl }}/assets/images/work/work-phone.png, {{ site.baseurl }}/assets/images/work/work-phone-retina.png 2x" media="(max-width: 414px)">
+	    <source srcset="{{ site.baseurl }}/assets/images/work/work-tablet.png, {{ site.baseurl }}/assets/images/work/work-tablet-retina.png 2x" media="(max-width: 1024px)">
+	    <source srcset="{{ site.baseurl }}/assets/images/work/work-desktop.png, {{ site.baseurl }}/assets/images/work/work-desktop-retina.png 2x">
+	    <img class="bgImg" srcset="{{ site.baseurl }}/assets/images/work/work-desktop.png, {{ site.baseurl }}/assets/images/work/work-desktop-retina.png 2x" alt="{{ project.folder }} cover">
+	</picture>
+
+</div>
+
+<div data-anchor="Gaming" class="section work-index">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'gaming' %}
+			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
+				<div class="one-half column" style="background-color:{{project.background-color}};">
+					<div class="project-logo">{% include {{ project.logo }} %}</div>
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+
+<div data-anchor="Technology" class="section work-index">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'technology' %}
+			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
+				<div class="one-half column" style="background-color:{{project.background-color}};">
+					 <div class="project-logo">{% include {{ project.logo }} %}</div>
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+
+<div data-anchor="Kids" class="section work-index">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'technology' %}
+			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
+				<div class="one-half column" style="background-color:{{project.background-color}};">
+					 <div class="project-logo">{% include {{ project.logo }} %}</div>
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+
+<div data-anchor="Services" class="section work-index">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'technology' %}
+			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
+				<div class="one-half column" style="background-color:{{project.background-color}};">
+					 <div class="project-logo">{% include {{ project.logo }} %}</div>
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+
+<div data-anchor="Product" class="section work-index">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'technology' %}
+			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
+				<div class="one-half column" style="background-color:{{project.background-color}};">
+					 <div class="project-logo">{% include {{ project.logo }} %}</div>
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+
+<div data-anchor="Legacy" class="section work-index">
+	<div class="row">
+		{% for project in site.pages %}
+			{% if project.type == 'technology' %}
+			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
+				<div class="one-half column" style="background-color:{{project.background-color}};">
+					 <div class="project-logo">{% include {{ project.logo }} %}</div>
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %}	
+	</div>
+</div>
+	
+<script type="text/javascript">
+	workIndex();
+	$(function() { 
+	  fullPageIndex();
+	});
+</script>>	

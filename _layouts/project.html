@@ -1,0 +1,41 @@
+---
+layout: work
+---
+
+{% for project in site.data.work.projects %}
+
+		{% if page.title == project.name %}
+
+		<div id="logo-work">
+			<a class="link" href="{{ site.baseurl }}" alt="Logo Work">{% include {{ project.logo }} %}</a>
+		</div>
+	
+		{% include {{ project.file }} %}	
+					
+		<div class="section work-section last-section bg-black">
+			<div class="center">
+			    <h2 class="white slide-bottom">{{ project.title }}</h2>
+			    <a class="ghost-button startProject padding-fix-cta" href="{{ site.baseurl }}/contact">Start a project</a>
+			
+				<a href="{{ site.baseurl }}/work/{{ project.next-project }}">
+					<div id="nextProjectBar" class="nextProjectBar" style="background-color: {{ project.colour-next }};">
+						<div id="arrow-down-icon">{% include icons/arrow-down-icon.html %}</div>
+						<div id="logo-next-work">{% include {{ project.logo-next }} %}</div>
+						<div class='mouse-container'>
+						  <div class='mouse'>
+						    <span class='scroll-down'></span>
+						  </div>
+						</div>
+					</div>
+				</a>
+				
+			</div>
+		</div>
+
+		<div id="next-project-url">{{ project.next-project }}</div>
+		<div id="next-project-colour">{{ project.colour-next }}</div>
+	
+	{% endif %}	
+		
+		
+{% endfor %}	
