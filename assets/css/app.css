@@ -9,6 +9,10 @@ body {
 	background-color: #212121;
 }
 
+iframe {
+  pointer-events: none;
+}
+
 .white {
   color: white;
   }  
@@ -39,6 +43,10 @@ body {
 }
 
 /* BACKGROUND COLOURS */ 
+.bg-orange {
+  background-color: #ff4c00;
+  }
+
 .bg-red {
   background-color: red;
   }
@@ -368,7 +376,7 @@ video.bgvid {
     }  
     .layerBlack {
     	opacity: 0.1;
-    	background: url(../images/home/home-bg-min.jpg) no-repeat center center;
+    	background: url(../images/home/home-bg.jpg) no-repeat center center;
     	-webkit-background-size: cover;
     	-moz-background-size: cover;
     	-o-background-size: cover;
@@ -600,7 +608,20 @@ span.scroll-down{
 }
 
 
-/* WORK SECTION */  
+/* WORK SECTION ////////////////////////////////////////////// */  
+
+
+
+/* TOP FIX IMG FOR MOBILE */
+.fix-top img {
+  	margin-top: 65px;
+}
+
+@media (min-width: 550px) {
+	.fix-top img {
+	  	margin-top: 0px;
+	}
+}
 
 .project-logo {
 	line-height: 50vh;
@@ -1289,6 +1310,37 @@ transition:all 0.3s ease-out;
     }
 }
 
+/* DROPBOX */
+
+.work-image .dropbox-animation {
+	top: 0em;
+}
+@media (max-height: 450px) and (orientation: landscape) {
+	.work-image .dropbox-animation {
+		top: 7.5em;
+	}
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+	.work-image .dropbox-animation {
+		margin-right: 2em;
+	}
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	.work-image .dropbox-animation {
+		margin-top: 7vh;
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
 
 /* BURGUER MENU */  
 
@@ -1730,7 +1782,13 @@ p { color: #727272; font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; mar
     h2 { font-size: 6.4rem; }
     p { font-size: 2.6rem; }
 }
-  
+
+/* Larger than Desktop HD */
+@media (min-width: 1920px) {
+    h1 { font-size: 9.9rem; }
+    h2 { font-size: 6.8rem; }
+    p { font-size: 3rem; }
+}  
 
 
 /* Links

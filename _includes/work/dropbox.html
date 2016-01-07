@@ -43,18 +43,15 @@
 <!-- Section 3 -->
 <div class="section work-section bg-white">
 
-	<!-- Section IMAGE 1 -->
-	<picture class="work-image" >
-	    <source srcset="{{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-phone.jpg, {{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-phone-retina.jpg 2x" media="(max-width: 414px)">
-	    <source srcset="{{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-tablet.jpg, {{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-tablet-retina.jpg 2x" media="(max-width: 1024px)">
-	    <source srcset="{{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-desktop.jpg, {{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-desktop-retina.jpg 2x">
-	    <img srcset="{{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-desktop.jpg, {{ site.baseurl }}/assets/images/work/{{ project.folder }}/{{ project.folder }}-3-desktop-retina.jpg 2x" alt="{{ project.title }}">
-	</picture>
+<div class="work-image" >
+	<div style="z-index:1000;position:absolute;rgba(0, 0, 0,1);height:100%;width:100%" class="hidden-md hidden-lg"></div>
+	   <iframe class="dropbox-animation" width="100%" height="90%" src="{{ site.baseurl }}/assets/images/work/{{ project.folder }}/download/dropbox.html" frameborder="0" allowfullscreen></iframe>
+</div>	   
 	
 	<!-- Section COPY 3 -->
 	<div class="layer">
 	    <h2>Cool animation</h2>
-	    <p>Awesome icon and button animations to drag users atention and donwload guide.</p>
+	    <p>Awesome icon and button<br>animations to drag users attention<br>and download guide.</p>
 	</div>
 	<div class="waypoint-hide"> </div>
 </div>
