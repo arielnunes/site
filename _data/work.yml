@@ -37,7 +37,27 @@ projects:
 	folder: 'progress', 
 	file: 'work/progress.html', 
 	logo: 'work/logos/progress-logo.html', 
-	colour-next: '#003bd5',
-	logo-next: 'work/logos/jackpotjoy-logo.html', 
-	next-project: 'jackpotjoy'
+	colour-next: '#ff6700',
+	logo-next: 'work/logos/nickelodeon-logo.html', 
+	next-project: 'nickelodeon'
 	}		
+
+- {name: 'Nickelodeon', 
+	title: 'Nickelodeon',
+	folder: 'nickelodeon', 
+	file: 'work/nickelodeon.html', 
+	logo: 'work/logos/nickelodeon-logo.html', 
+	colour-next: '#003bd5',
+	logo-next: 'work/logos/hopster-logo.html', 
+	next-project: 'hopster'
+	}		
+
+- {name: 'Hopster', 
+	title: 'Hopster',
+	folder: 'hopster', 
+	file: 'work/hopster.html', 
+	logo: 'work/logos/hopster-logo.html', 
+	colour-next: '#003bd5',
+	logo-next: 'work/logos/hopster-logo.html', 
+	next-project: 'hopster'
+	}			

@@ -133,6 +133,7 @@ function fullPageIndex(){
 	 $("#nav-black").css('opacity', 0).fadeOut();
 }
 
+
 function setWorkPage(){
 
 	var $nextProjectUrl = $('#next-project-url').html();
@@ -428,8 +429,7 @@ function fullPage(){
     	css3: true,
     	verticalCentered: true,
     	scrollBar: true,
-    	scrollingSpeed: 500,
-    	fitToSectionDelay: 100
+    	scrollingSpeed: 500
     });
        
 }

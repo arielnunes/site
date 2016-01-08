@@ -42,6 +42,7 @@ iframe {
     }
 }
 
+
 /* BACKGROUND COLOURS */ 
 .bg-orange {
   background-color: #ff4c00;
@@ -610,7 +611,9 @@ span.scroll-down{
 
 /* WORK SECTION ////////////////////////////////////////////// */  
 
-
+.thumb hover {
+	
+}
 
 /* TOP FIX IMG FOR MOBILE */
 .fix-top img {
@@ -625,51 +628,56 @@ span.scroll-down{
 
 .project-logo {
 	line-height: 50vh;
-  text-align: center;
+  	text-align: center;
+  	padding: 0;
+  	margin: 0;
 }
 
-.project-logo svg {
+.project-logo svg, .project-logo img {
     margin-bottom: -4vh;
-    max-width: 50vh;
-    max-height: 11vh;
-}
-
-/* Larger than mobile */
-@media (min-width: 400px) {
-    .project-logo svg {
-       margin-bottom: -7vh;
-       max-height: 20vh;
-       max-width: 70vh;
-    }
+    max-width: 45vh;
+    max-height: 25vh;
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-    .project-logo svg {
-       margin-bottom: -30vh;
+    .project-logo svg, .project-logo img {
+       margin-bottom: -34vh;
+       max-height: 50vh;
+       max-width: 40vw;
     }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-.project-logo svg {
+.project-logo svg, .project-logo img {
+       margin-bottom: -30vh;
+       max-height: 30vh;
        max-width: 30vh;
     }
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-    .project-logo svg {
-       max-width: 40vw;
-       height: 10vh;
+    .project-logo svg, .project-logo img {
+		max-height: 40vh;
+		max-width: 40vh;
        margin-bottom: -40vh;
     }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-    .project-logo svg {
-       max-width: 30vw;
+    .project-logo svg, .project-logo img {
+       min-height: 10vh;
+       min-width: 25vw;
+      margin-bottom: -37.5vh;
+    }    
+}
+
+@media (min-width: 1920px) {
+    .project-logo svg, .project-logo img {
+      margin-bottom: -35vh;
     }    
 }
 
@@ -734,7 +742,15 @@ span.scroll-down{
 	fill: #CDDC39;
 }
 
-.work-icon:hover {
+
+.work-index .row .column {
+	-ms-transform: scale(1); /* IE 9 */
+	-webkit-transform: scale(1); /* Safari */
+	transform: scale(1);
+	transition:all 0.3s ease-in;
+}
+
+.work-icon:hover, .work-index .row .column:hover {
 -ms-transform: scale(1.1); /* IE 9 */
 -webkit-transform: scale(1.1); /* Safari */
 transform: scale(1.1);
@@ -942,7 +958,7 @@ transition:all 0.3s ease-out;
 		z-index: 5;
 	}
 	
-	#logo-work svg {
+	#logo-work svg, #logo-work img {
 		max-width: 210px;
 		max-height: 40px;
 	}
@@ -954,7 +970,7 @@ transition:all 0.3s ease-out;
 		top: 55px;
 		left: 220px;
 	}
-  #logo-work svg {
+  #logo-work svg, #logo-work img {
 		max-width: 270px;
 		max-height: 50px;
 	}
@@ -966,7 +982,7 @@ transition:all 0.3s ease-out;
 		left: 250px;
 	}
 	
-	#logo-work svg {
+	#logo-work svg, #logo-work img {
 			max-width: 270px;
 			max-height: 60px;
 		}

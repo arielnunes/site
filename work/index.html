@@ -56,7 +56,7 @@ title: Work Index
 <div data-anchor="Kids" class="section work-index">
 	<div class="row">
 		{% for project in site.pages %}
-			{% if project.type == 'technology' %}
+			{% if project.type == 'kids' %}
 			<a data-color="{{project.background-color}}" href="{{ site.baseurl }}/work/{{ project.folder }}/">
 				<div class="one-half column" style="background-color:{{project.background-color}};">
 					 <div class="project-logo">{% include {{ project.logo }} %}</div>
